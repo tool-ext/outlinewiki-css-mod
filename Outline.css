@@ -1,0 +1,29 @@
+/* Full width **/
+
+.eSMets {
+    flex-direction: row !important; 
+
+}
+
+/* Normal width **/
+.dyKbFK {
+    display: block !important;
+}	
+
+@media (min-width: 100em) {
+    .lcznko {
+        transform: translateX(-5px) !important;
+        xwidth: 0px;
+    }
+}
+
+
+
+/* Sidebar COMPACT stuff */
+
+@media (min-width: 46.0625em) {
+    .chWyrG {
+        padding: 2px 8px 2px 16px;
+        font-size: 14px;
+    }
+}
