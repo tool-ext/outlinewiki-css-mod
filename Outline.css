@@ -94,6 +94,16 @@ SPACE ABOVE MAIN BODY CONTAINER
     }
 }
 
+
+/*
+- The above "fixes" issue of how when center aligned right sidebar just floats to right
+- Actual fix is to adjust columns so they are actually properly aligned ... 
+
+
+
+*/
+
+
 /* Normal width **/
 .dyKbFK {
     display: block !important;
