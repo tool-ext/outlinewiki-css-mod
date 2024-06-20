@@ -10,6 +10,7 @@ body .ProseMirror p a {
     font-weight: 700 !important; /* 500 is default */
     text-underline-offset: 4px !important; /* Taken from Archbee */
     text-decoration: underline 2px #2166ae;
+    
 }
 /* Default link blue */
 .dLUgmi p a {
@@ -20,12 +21,46 @@ body .ProseMirror p a {
     xborder-bottom-color: #3183d8;
     text-decoration: underline 2px #3183d8;
 }
+li.eRfDvQ,
+li.iObXKV,
+li.bKGDMe {
+    margin-bottom: 5px;
+}
+
+/* TOC Header */
+h3.gwjWmn {
+    font-size: 13px;
+    font-weight: 400; /* 600 is default */
+    color: rgb(155, 166, 178); /* Default = rgb(155, 166, 178) */
+    letter-spacing: 0.03em;
+    margin-top: 10px;
+    
+    margin-bottom: 0em !important;
+}
+
+/* TOC Start of listing */
+ol.cRtjba {
+    margin-top: .5em; /* 1em is default */
+}
+
+/* TOC Without highlight set */
+.eRfDvQ a, /* h1 */
+.iObXKV a, /* h2 */
+.bKGDMe a /* h3 */
+/* h4 does not show up in TOC */
+{
+    xcolor: #1f2937 !important;
+    color: #6b7280 !important; /* Soften the TOC colors */
+}
+
 .hQRhCs .jCkula p a, /* Toc MAIN */
 .hQRhCs .Jopdk a, /* Toc highlight */
 .hQRhCs .hozMwp a, /* Toc highlight */
 .hQRhCs .fdBBba a /* Toc highlight */
 {
     color: #3183d8; /* Blue color */
+    
+    
 }
 
 .hQRhCs .fLXxMF a:hover, /* TOC - H1 a */ 
