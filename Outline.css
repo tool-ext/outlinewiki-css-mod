@@ -1,8 +1,62 @@
-/* Full width **/
+/* 
+LIGHT - DARK
+Minor change in class at end of this string for light and dark ... right after ROOT div
+Light - sc-1fsvudc-0 sc-1hw3uqy-0 iyNBFd dLUgmi
+Dark - sc-1fsvudc-0 sc-1hw3uqy-0 iyNBFd hQRhCs 
+*/
 
-.eSMets {
-    flex-direction: row !important; 
+/* Default link styles */
+body .ProseMirror p a {
+    font-weight: 700 !important; /* 500 is default */
+    text-underline-offset: 4px !important; /* Taken from Archbee */
+    text-decoration: underline 2px #2166ae;
+}
+/* Default link blue */
+.dLUgmi p a {
+    color: #2166ae; /* Blue from Archeebee */
+}
+/* Dark link blue */
+.hQRhCs .jCkula p a {
+    xborder-bottom-color: #3183d8;
+    text-decoration: underline 2px #3183d8;
+}
+.hQRhCs .jCkula p a, /* Toc MAIN */
+.hQRhCs .Jopdk a, /* Toc highlight */
+.hQRhCs .hozMwp a, /* Toc highlight */
+.hQRhCs .fdBBba a /* Toc highlight */
+{
+    color: #3183d8; /* Blue color */
+}
 
+.hQRhCs .fLXxMF a:hover, /* TOC - H1 a */ 
+.hQRhCs .gOBcBA a:hover, /* TOC - H2 a */
+.hQRhCs .dHWyXb a:hover, /*  TOC - H3 a */
+.hQRhCs .dHWyXb a:hover /*  TOC - H4 a */
+{
+    color: yellow
+}
+
+/* 
+SPACE ABOVE MAIN BODY CONTAINER
+- Default = 6vh
+- Felt too much space above content for me
+*/
+.gJtqqy {
+    margin-top: 4vh; /* Default is 6 so this moves it up a bit */
+}
+@media (min-width: 46.0625em) {
+    /* 
+    MAIN BODY CONTAINER
+    - Default = margin: 4px auto 12px;
+    - By removing the auto the content is aligned to left sidebar
+    - Docusaurus and Archbee still seem to use AUTO but still have a different layout
+    - Investigate how Archee and Docusaurus do it more
+    */
+    .bchuvI, /* First div without TOC */
+    .iHzmWh /* When TOC applied get this */
+    {
+        xmargin: 4px 0px 12px 0px;
+    }
 }
 
 /* Normal width **/
@@ -10,6 +64,15 @@
     display: block !important;
 }	
 
+/* TABLE OF CONTENTS CHANGE */
+/* 
+DIV ABOVE CONTENT 
+- Switches left sidebar to right
+- Default set by dev is "reverse" instead of row
+*/
+.eSMets {
+    flex-direction: row !important; 
+}
 @media (min-width: 100em) {
     .lcznko {
         transform: translateX(-5px) !important;
@@ -19,11 +82,29 @@
 
 
 
-/* Sidebar COMPACT stuff */
-
-@media (min-width: 46.0625em) {
-    .chWyrG {
-        padding: 2px 8px 2px 16px;
-        font-size: 14px;
-    }
+/* 
+TOC
+Movig it over a bit
+*/
+.lcznko {
+    padding-left: 20px
 }
+.lcznko ol {
+    /* 
+    TOC - Spacing
+    Should this be MARGIN or PADDING? */
+    padding-left: 15px;
+    
+    /* TOC 
+    - Line
+    - Gray separation line 
+    - Nice! I like this change
+    */
+    border-left: 1px solid #dadde1; /* Gray line color taken from Docusaurus */
+    
+    /* Use this one for Dark theme instead  ... #444950 */
+}
+.hQRhCs .lcznko ol {
+    border-left: 1px solid #444950;
+}
+
