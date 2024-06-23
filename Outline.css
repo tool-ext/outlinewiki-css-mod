@@ -4,9 +4,7 @@ Minor change in class at end of this string for light and dark ... right after R
 Light - sc-1fsvudc-0 sc-1hw3uqy-0 iyNBFd dLUgmi
 Dark - sc-1fsvudc-0 sc-1hw3uqy-0 iyNBFd hQRhCs 
 */
-body {
-    padding: 300px !important;
-}
+
 /* Default link styles */
 body .ProseMirror p a {
     font-weight: 700 !important; /* 500 is default */
