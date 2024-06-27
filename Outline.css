@@ -78,7 +78,7 @@ SPACE ABOVE MAIN BODY CONTAINER
 - Felt too much space above content for me
 */
 .gJtqqy {
-    margin-top: 4vh; /* Default is 6 so this moves it up a bit */
+    margin-top: 3vh; /* Default is 6 so this moves it up a bit */
 }
 @media (min-width: 46.0625em) {
     /* 
