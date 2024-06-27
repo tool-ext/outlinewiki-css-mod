@@ -7,9 +7,10 @@ Dark - sc-1fsvudc-0 sc-1hw3uqy-0 iyNBFd hQRhCs
 
 /* Default link styles */
 body .ProseMirror p a {
-    font-weight: 700 !important; /* 500 is default */
-    text-underline-offset: 4px !important; /* Taken from Archbee */
-    text-decoration: underline 2px #2166ae;
+    font-weight: 400 !important; /* 500 is default */
+	color: #00078e !important; /* Taken from my blog -- think this was the old color used by NYTimes */
+    xtext-decoration: underline 2px #2166ae; /* Removing this ... */
+	xtext-underline-offset: 4px !important; /* Taken from Archbee */
     
 }
 /* Default link blue */
