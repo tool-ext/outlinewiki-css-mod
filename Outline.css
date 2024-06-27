@@ -153,3 +153,16 @@ Movig it over a bit
     border-left: 1px solid #444950;
 }
 
+/**
+SYNC COLOR WITH DATABASE COLORS ... 
+- Slightly changes gray to match
+- Adds border line right on sidebar wheras before no line
+*/
+body .kGiBUm {
+    background: rgba(249, 249, 250, 1) !important; /** default = rgb(237, 242, 247) */
+    xoutline-color: #9E9E9E;
+    border-right: 1px solid #e7e7e9; /** Added this as a border but 
+s should use an outline method for CSS ... as is with Nocod */
+}
+
+
