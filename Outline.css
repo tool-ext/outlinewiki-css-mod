@@ -145,7 +145,10 @@ Movig it over a bit
     - Gray separation line 
     - Nice! I like this change
     */
-    border-left: 1px solid #dadde1; /* Gray line color taken from Docusaurus */
+    border-left: .7px solid #dadde1; /* 
+	Gray line color taken from Docusaurus 
+	Update: Was too prominent .. using .7px .. but not sure this is best ... likely use transparent
+	*/
     
     /* Use this one for Dark theme instead  ... #444950 */
 }
@@ -153,16 +156,26 @@ Movig it over a bit
     border-left: 1px solid #444950;
 }
 
-/**
+/*
 SYNC COLOR WITH DATABASE COLORS ... 
 - Slightly changes gray to match
 - Adds border line right on sidebar wheras before no line
 */
 body .kGiBUm {
-    background: rgba(249, 249, 250, 1) !important; /** default = rgb(237, 242, 247) */
+    background: rgba(249, 249, 250, 1) !important; /* default = rgb(237, 242, 247) */
     xoutline-color: #9E9E9E;
-    border-right: 1px solid #e7e7e9; /** Added this as a border but 
+    border-right: 1px solid #e7e7e9; /* Added this as a border but 
 s should use an outline method for CSS ... as is with Nocod */
+}
+
+
+/*
+HIDES 
+INVITE PEOPLE
+We know how to invite inside admin so this is maybe not needed.
+*/
+.cJRdro div:nth-of-type(3) {
+	display: none !important;
 }
 
 
