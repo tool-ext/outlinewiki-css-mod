@@ -90,7 +90,7 @@ SPACE ABOVE MAIN BODY CONTAINER
     .bchuvI, /* First div without TOC */
     .iHzmWh /* When TOC applied get this */
     {
-        xmargin: 4px 0px 12px 0px;
+        margin: 4px 0px 12px 3em;
     }
 }
 
