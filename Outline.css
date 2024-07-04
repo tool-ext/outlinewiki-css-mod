@@ -180,3 +180,17 @@ We know how to invite inside admin so this is maybe not needed.
 }
 
 
+/*
+- Hides "Headings yoou add will appear here" note ... 
+- Dont need this
+*/
+
+/* TOC Text */
+/* TOC Header */
+.sc-k72mg6-1.hRkakj .gwjWmn, 
+.sc-k72mg6-1.hRkakj .jKhuYk
+{
+    display: none;
+}
+
+
