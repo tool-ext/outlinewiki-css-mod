@@ -9,13 +9,13 @@ Dark - sc-1fsvudc-0 sc-1hw3uqy-0 iyNBFd hQRhCs
 body .ProseMirror p a {
     font-weight: 400 !important; /* 500 is default */
 	color: #2257da !important; /* NYtimes blue from my blog #00078e - removed -- Changed to AXIOS blue which is a pretty standard blue link color*/
-    xtext-decoration: underline 2px #2166ae; /* Removing this ... */
+    xtext-decoration: underline 2px #2257da; /* Removing this ... */
 	xtext-underline-offset: 4px !important; /* Taken from Archbee */
     
 }
 /* Default link blue */
 .dLUgmi p a {
-    color: #2166ae; /* Blue from Archeebee */
+    color: #2257da; /* Blue from Archeebee */
 }
 /* Dark link blue */
 .hQRhCs .jCkula p a {
