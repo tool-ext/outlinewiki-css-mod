@@ -1,32 +1,62 @@
-/* 
-LIGHT - DARK
-Minor change in class at end of this string for light and dark ... right after ROOT div
-Light - sc-1fsvudc-0 sc-1hw3uqy-0 iyNBFd dLUgmi
-Dark - sc-1fsvudc-0 sc-1hw3uqy-0 iyNBFd hQRhCs 
+/*
+
+MAIN SWITCH
+- Page navigation from LEFT to RIGHT
+- Default set by dev is "reverse" instead of row
 */
 
-/* Default link styles */
-body .ProseMirror p a {
-    font-weight: 400 !important; /* 500 is default */
-	color: #2257da !important; /* NYtimes blue from my blog #00078e - removed -- Changed to AXIOS blue which is a pretty standard blue link color*/
-    xtext-decoration: underline 2px #2257da; /* Removing this ... */
-	xtext-underline-offset: 4px !important; /* Taken from Archbee */
+.eSMets {
+    flex-direction: row !important; 
+}
+@media (min-width: 100em) {
+    .lcznko {
+        transform: translateX(-5px) !important;
+        xwidth: 0px;
+    }
+}
+
+
+/*
+
+NOT SURE -- maybe TOC
+
+*/
+
+/* Normal width **/
+.dyKbFK {
+    display: block !important;
+}	
+
+
+/* 
+TOC
+Movig it over a bit
+*/
+.lcznko {
+    padding-left: 20px
+}
+.lcznko ol {
+    /* 
+    TOC - Spacing
+    Should this be MARGIN or PADDING? */
+    padding-left: 15px;
     
+    /* TOC 
+    - Line
+    - Gray separation line 
+    - Nice! I like this change
+    */
+    border-left: .7px solid #dadde1; /* 
+	Gray line color taken from Docusaurus 
+	Update: Was too prominent .. using .7px .. but not sure this is best ... likely use transparent
+	*/
+    
+    /* Use this one for Dark theme instead  ... #444950 */
 }
-/* Default link blue */
-.dLUgmi p a {
-    color: #2257da; /* Blue from Archeebee */
+.hQRhCs .lcznko ol {
+    border-left: 1px solid #444950;
 }
-/* Dark link blue */
-.hQRhCs .jCkula p a {
-    xborder-bottom-color: #3183d8;
-    text-decoration: underline 2px #3183d8;
-}
-li.eRfDvQ,
-li.iObXKV,
-li.bKGDMe {
-    margin-bottom: 5px;
-}
+
 
 /* TOC Header */
 h3.gwjWmn {
@@ -72,6 +102,73 @@ ol.cRtjba {
     color: yellow
 }
 
+
+
+
+
+
+
+
+
+
+/*
+
+LINK COLORS
+
+*/
+
+/* 
+LIGHT - DARK
+Minor change in class at end of this string for light and dark ... right after ROOT div
+Light - sc-1fsvudc-0 sc-1hw3uqy-0 iyNBFd dLUgmi
+Dark - sc-1fsvudc-0 sc-1hw3uqy-0 iyNBFd hQRhCs 
+*/
+
+/* Default link styles */
+body .ProseMirror p a {
+    font-weight: 400 !important; /* 500 is default */
+	color: #2257da !important; /* NYtimes blue from my blog #00078e - removed -- Changed to AXIOS blue which is a pretty standard blue link color*/
+    xtext-decoration: underline 2px #2257da; /* Removing this ... */
+	xtext-underline-offset: 4px !important; /* Taken from Archbee */
+    
+}
+
+/* Default link blue */
+.dLUgmi p a {
+    color: #2257da; /* Blue from Archeebee */
+}
+/* Dark link blue */
+.hQRhCs .jCkula p a {
+    xborder-bottom-color: #3183d8;
+    text-decoration: underline 2px #3183d8;
+}
+
+
+
+
+/*
+
+Less space for LI elements
+
+*/
+
+li.eRfDvQ,
+li.iObXKV,
+li.bKGDMe {
+    margin-bottom: 5px;
+}
+
+
+
+
+
+/*
+
+BODY
+
+*/
+
+
 /* 
 SPACE ABOVE MAIN BODY CONTAINER
 - Default = 6vh
@@ -101,83 +198,7 @@ SPACE ABOVE MAIN BODY CONTAINER
 - Actual fix is to adjust columns so they are actually properly aligned ... 
 
 
-
 */
-
-
-/* Normal width **/
-.dyKbFK {
-    display: block !important;
-}	
-
-/* TABLE OF CONTENTS CHANGE */
-/* 
-DIV ABOVE CONTENT 
-- Switches left sidebar to right
-- Default set by dev is "reverse" instead of row
-*/
-.eSMets {
-    flex-direction: row !important; 
-}
-@media (min-width: 100em) {
-    .lcznko {
-        transform: translateX(-5px) !important;
-        xwidth: 0px;
-    }
-}
-
-
-
-/* 
-TOC
-Movig it over a bit
-*/
-.lcznko {
-    padding-left: 20px
-}
-.lcznko ol {
-    /* 
-    TOC - Spacing
-    Should this be MARGIN or PADDING? */
-    padding-left: 15px;
-    
-    /* TOC 
-    - Line
-    - Gray separation line 
-    - Nice! I like this change
-    */
-    border-left: .7px solid #dadde1; /* 
-	Gray line color taken from Docusaurus 
-	Update: Was too prominent .. using .7px .. but not sure this is best ... likely use transparent
-	*/
-    
-    /* Use this one for Dark theme instead  ... #444950 */
-}
-.hQRhCs .lcznko ol {
-    border-left: 1px solid #444950;
-}
-
-/*
-SYNC COLOR WITH DATABASE COLORS ... 
-- Slightly changes gray to match
-- Adds border line right on sidebar wheras before no line
-*/
-body .kGiBUm {
-    background: rgba(249, 249, 250, 1) !important; /* default = rgb(237, 242, 247) */
-    xoutline-color: #9E9E9E;
-    border-right: 1px solid #e7e7e9; /* Added this as a border but 
-s should use an outline method for CSS ... as is with Nocod */
-}
-
-
-/*
-HIDES 
-INVITE PEOPLE
-We know how to invite inside admin so this is maybe not needed.
-*/
-.cJRdro div:nth-of-type(3) {
-	display: none !important;
-}
 
 
 /*
