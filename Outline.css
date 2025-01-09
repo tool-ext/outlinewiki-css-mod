@@ -1,9 +1,17 @@
+/* Light Theme Variables */
 :root {
-    --bgcolor-main: green;
-    --bgcolor-sidebar: blue;
-    --active-page-sidebar: yellow;
-
+    --bgcolor-main: purple; 
+    --bgcolor-sidebar: pink;
+    --active-page-sidebar: green;
 }
+/* Dark Theme Variables */
+body[style*="background: rgb(17, 19, 25)"] {
+    --bgcolor-main: #1e1e1e;				/* green */
+    --bgcolor-sidebar: #262626;			/* blue */
+    --active-page-sidebar: #363636;		/* yellow */
+    --border-color: #363636;
+}
+
 
 /* 
 ----------------------
@@ -11,11 +19,15 @@ Header
 ----------------------
 */
 
-/* Search Radius */
-.gCugRT .sc-1qe6fj8-4 {
+/* GLOBAL - Search Radius */
+#root > div > div > div > div > div > div > div > label > div
+{
     border-radius: 4px;
 }
-
+/* GLOBAL - Hide-Show Invite in sidebar */
+#root > div > div > span > div > div > div:nth-child(5) > div + div {
+	display: none;
+}
 
 /* 
 ----------------------
@@ -29,9 +41,56 @@ Main Body
 #root > div > div {	xbackground: red; }
 */
 /* Main body */
+body,
+#root > div,
+#root > div > div,
+#root > div > div > div,
+#root > div > div > div > div,
 #root > div > div > div > div > div {
 	background: var(--bgcolor-main) !important;
 }
+.ProseMirror p a {
+	color: #5a95f3 !important;
+}	
+.ProseMirror p a, .ProseMirror p a:hover {
+	text-decoration-color: #5a95f3;
+}
+
+
+
+#root > div > div > div > div > div > div > div > div a {
+	color: #b3b3b3;
+}
+
+
+
+
+#root div.sc-1gec90z-1.XnQAQ {
+	xbackground-color: green !important;	
+}
+#root div.sc-1gec90z-1.XnQAQ h3 {
+	display: none;
+}
+#root div.sc-1gec90z-1.XnQAQ ol li a {
+	font-size: 12px !important;
+}
+#root div.sc-1gec90z-1.XnQAQ ol li {
+	padding-top: 0px;
+	padding-bottom: 3px;
+	margin-bottom: 0;	
+}
+#root div.sc-1gec90z-1.XnQAQ ol li.cWyBrm {
+	border-left: 2px solid var(--border-color);
+	margin-left: 6px;
+	padding-left: 9px;
+}
+#root div.sc-1gec90z-1.XnQAQ ol li.fgOmrT {
+	border-left: 2px solid var(--border-color);
+	margin-left: 6px;
+		padding-left: 9px;
+}
+
+
 /* 
 --- overrides doc list bit which is annoying to target and had been trying stuff lik this
 div#DndLiveRegion-0 + div,   
@@ -49,7 +108,9 @@ Depth in below can be adjusted to restore selective styles of certain divs from 
 #root > div > div > div > div > div div {
 	background: var(--bgcolor-main) !important;
 }
-
+#root > div > div > div > div > div div a:focus div {
+	background-color: red !important;
+}
 
 
 /* 
@@ -57,30 +118,32 @@ Depth in below can be adjusted to restore selective styles of certain divs from 
 Sidebar 
 ----------------------
 */
-
+#root > div > div > span > div {
+    xborder-left: 1px solid red;
+}
 /* Background */
-body[style*="background: rgb(17, 19, 25)"] #root > div > div > span > div {
+#root > div > div > span > div {
     background: var(--bgcolor-sidebar) !important;
     /* xborder-right removed as it appears unused */
+    xborder-right: 1px solid red;
+    box-shadow: inset -1px 0 0 0 var(--border-color) !important;
 }
-
 
 /* 
 Highlight Active Links 
 */
-body[style*="background: rgb(17, 19, 25)"] #root > div > div > span > div a[aria-current="page"].active,
-#root > div > div > span > div > div:nth-child(1) > button.active
+#root > div > div > span > div a[aria-current="page"].active
 {
-    color: rgb(230, 230, 230);
+    xcolor: rgb(230, 230, 230);
     background: var(--active-page-sidebar) !important;
 }
 /* 
 Highlight Color on Hover ... 
 */
-body[style*="background: rgb(17, 19, 25)"] #root > div > div > span > div button:active, 
-body[style*="background: rgb(17, 19, 25)"] #root > div > div > span > div button:hover, 
-body[style*="background: rgb(17, 19, 25)"] #root > div > div > span > div button[aria-expanded="true"] {
-    background: yellow !important;	
+#root > div > div > span > div button:active, 
+#root > div > div > span > div button:hover, 
+#root > div > div > span > div button[aria-expanded="true"] {
+    background: var(--active-page-sidebar) !important;	
 }
 /* GLOBAL - Hide invite link */
 #root > div > div > span > div > div > div:nth-child(5) > div {
