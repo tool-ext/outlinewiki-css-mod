@@ -1,0 +1,81 @@
+/* 
+----------------------
+Header
+----------------------
+*/
+
+/* Search Radius */
+.gCugRT .sc-1qe6fj8-4 {
+    border-radius: 4px;
+}
+
+
+/* 
+----------------------
+Body
+----------------------
+*/
+
+/* 
+
+Main Body 
+#root > div > div {	xbackground: red; }
+*/
+/* Main body */
+#root > div > div > div > div > div {
+	background: green !important;
+}
+/* 
+--- overrides doc list bit which is annoying to target and had been trying stuff lik this
+div#DndLiveRegion-0 + div,   
+div#DndLiveRegion-0 + div > div,
+div#DndLiveRegion-1 + div + div + div { }
+}
+
+And also tried this: 
+#root > div > div > div > div > div > div > div
+
+But final below seems best
+
+Depth in below can be adjusted to restore selective styles of certain divs from original theme
+*/
+#root > div > div > div > div > div div {
+	background: green !important;
+}
+
+
+
+/* 
+----------------------
+Sidebar 
+----------------------
+*/
+
+/* Background */
+body[style*="background: rgb(17, 19, 25)"] #root > div > div > span > div {
+    background: blue !important;
+    /* xborder-right removed as it appears unused */
+}
+
+
+/* 
+Highlight Active Links 
+*/
+body[style*="background: rgb(17, 19, 25)"] #root > div > div > span > div a[aria-current="page"].active,
+#root > div > div > span > div > div:nth-child(1) > button.active
+{
+    color: rgb(230, 230, 230);
+    background: yellow !important;
+}
+/* 
+Highlight Color on Hover ... 
+*/
+body[style*="background: rgb(17, 19, 25)"] #root > div > div > span > div button:active, 
+body[style*="background: rgb(17, 19, 25)"] #root > div > div > span > div button:hover, 
+body[style*="background: rgb(17, 19, 25)"] #root > div > div > span > div button[aria-expanded="true"] {
+    background: yellow !important;	
+}
+/* GLOBAL - Hide invite link */
+#root > div > div > span > div > div > div:nth-child(5) > div {
+	xdisplay: none;
+}
