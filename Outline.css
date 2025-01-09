@@ -1,3 +1,10 @@
+:root {
+    --bgcolor-main: green;
+    --bgcolor-sidebar: blue;
+    --active-page-sidebar: yellow;
+
+}
+
 /* 
 ----------------------
 Header
@@ -23,7 +30,7 @@ Main Body
 */
 /* Main body */
 #root > div > div > div > div > div {
-	background: green !important;
+	background: var(--bgcolor-main) !important;
 }
 /* 
 --- overrides doc list bit which is annoying to target and had been trying stuff lik this
@@ -40,7 +47,7 @@ But final below seems best
 Depth in below can be adjusted to restore selective styles of certain divs from original theme
 */
 #root > div > div > div > div > div div {
-	background: green !important;
+	background: var(--bgcolor-main) !important;
 }
 
 
@@ -53,7 +60,7 @@ Sidebar
 
 /* Background */
 body[style*="background: rgb(17, 19, 25)"] #root > div > div > span > div {
-    background: blue !important;
+    background: var(--bgcolor-sidebar) !important;
     /* xborder-right removed as it appears unused */
 }
 
@@ -65,7 +72,7 @@ body[style*="background: rgb(17, 19, 25)"] #root > div > div > span > div a[aria
 #root > div > div > span > div > div:nth-child(1) > button.active
 {
     color: rgb(230, 230, 230);
-    background: yellow !important;
+    background: var(--active-page-sidebar) !important;
 }
 /* 
 Highlight Color on Hover ... 
