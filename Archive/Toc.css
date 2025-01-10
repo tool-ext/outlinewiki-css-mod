@@ -1,0 +1,73 @@
+/* 
+TOC
+Movig it over a bit
+*/
+.lcznko {
+    padding-left: 20px
+}
+.lcznko ol {
+    /* 
+    TOC - Spacing
+    Should this be MARGIN or PADDING? */
+    padding-left: 15px;
+    
+    /* TOC 
+    - Line
+    - Gray separation line 
+    - Nice! I like this change
+    */
+    border-left: .7px solid #dadde1; /* 
+	Gray line color taken from Docusaurus 
+	Update: Was too prominent .. using .7px .. but not sure this is best ... likely use transparent
+	*/
+    
+    /* Use this one for Dark theme instead  ... #444950 */
+}
+.hQRhCs .lcznko ol {
+    border-left: 1px solid #444950;
+}
+
+
+/* TOC Header */
+h3.gwjWmn {
+    font-size: 13px;
+    font-weight: 400; /* 600 is default */
+    color: rgb(155, 166, 178); /* Default = rgb(155, 166, 178) */
+    letter-spacing: 0.03em;
+    margin-top: 10px;
+    
+    margin-bottom: 0em !important;
+}
+
+/* TOC Start of listing */
+ol.cRtjba {
+    margin-top: .5em; /* 1em is default */
+}
+
+/* TOC Without highlight set */
+.eRfDvQ a, /* h1 */
+.iObXKV a, /* h2 */
+.bKGDMe a /* h3 */
+/* h4 does not show up in TOC */
+{
+    xcolor: #1f2937 !important;
+    color: #6b7280 !important; /* Soften the TOC colors */
+}
+
+.hQRhCs .jCkula p a, /* Toc MAIN */
+.hQRhCs .Jopdk a, /* Toc highlight */
+.hQRhCs .hozMwp a, /* Toc highlight */
+.hQRhCs .fdBBba a /* Toc highlight */
+{
+    color: #3183d8; /* Blue color */
+    
+    
+}
+
+.hQRhCs .fLXxMF a:hover, /* TOC - H1 a */ 
+.hQRhCs .gOBcBA a:hover, /* TOC - H2 a */
+.hQRhCs .dHWyXb a:hover, /*  TOC - H3 a */
+.hQRhCs .dHWyXb a:hover /*  TOC - H4 a */
+{
+    color: yellow
+}

@@ -1,8 +1,11 @@
 /* Light Theme Variables */
 :root {
-    --bgcolor-main: purple; 
-    --bgcolor-sidebar: pink;
-    --active-page-sidebar: green;
+    --bgcolor-main: #ffffff; 
+    --bgcolor-sidebar: #f6f6f6;
+    --active-page-sidebar: #e4e4e4;
+    --border-color: #e0e0e0;
+    --content-link-color: #1567ed;
+    --toc-link-color: #5c5c5c;
 }
 /* Dark Theme Variables */
 body[style*="background: rgb(17, 19, 25)"] {
@@ -10,6 +13,29 @@ body[style*="background: rgb(17, 19, 25)"] {
     --bgcolor-sidebar: #262626;			/* blue */
     --active-page-sidebar: #363636;		/* yellow */
     --border-color: #363636;
+    --content-link-color: #5a95f3;
+    --toc-link-color: #b3b3b3;
+}
+
+
+@media (min-width: 46.0625em) {
+	/*
+	Outline feels like awkward width 
+	
+	*/
+    .TXOLU {
+        grid-template-columns: 1fr minmax(0px, calc(52em + 88px)) 1fr;
+    }
+    /*
+    
+    And then have to adjust the width 
+    here 
+    
+    */
+    .bucDYc {
+    	width: 90%;
+	}
+	
 }
 
 
@@ -40,33 +66,55 @@ Body
 Main Body 
 #root > div > div {	xbackground: red; }
 */
-/* Main body */
+/* 
+
+Main body 
+Not sure all ar necessary but it works
+*/
 body,
 #root > div,
 #root > div > div,
 #root > div > div > div,
 #root > div > div > div > div,
-#root > div > div > div > div > div {
+#root > div > div > div > div > div,
+#root > div > div > div > div:before,
+/* Fixes Content Editable areas that had black bgs */
+{
 	background: var(--bgcolor-main) !important;
 }
+
+
+/* Fixed color in popover but will probably break */
+.gPQRQj::before {
+	background: var(--bgcolor-main) !important;
+}
+/* Main h1 slightly smaller */
+.kpdBwO {
+    font-size: 2.05em;
+}
+
+
+/* Targets main page h1 */
+#root > div > div > div > div > div > div > div > div div span[contenteditable="true"] {
+	background: var(--bgcolor-main) !important;	
+}
 .ProseMirror p a {
-	color: #5a95f3 !important;
+	color: var(--content-link-color) !important;
 }	
 .ProseMirror p a, .ProseMirror p a:hover {
-	text-decoration-color: #5a95f3;
+	text-decoration-color: var(--content-link-color);
 }
 
+/*
+Table of Contents
 
-
+*/
 #root > div > div > div > div > div > div > div > div a {
-	color: #b3b3b3;
+	color: var(--toc-link-color);
 }
-
-
-
-
-#root div.sc-1gec90z-1.XnQAQ {
-	xbackground-color: green !important;	
+#xroot div.sc-1gec90z-1.XnQAQ,
+#root > div > div > div + div > div > div.sc-1fsvudc-0.sc-9gqp5-0.PJkw.hpAuij > div.sc-1gec90z-0.TXOLU > div.sc-1gec90z-1.XnQAQ > div {
+		background-color: transparent !important; /* Used GREEN here for testing */	
 }
 #root div.sc-1gec90z-1.XnQAQ h3 {
 	display: none;
@@ -87,7 +135,7 @@ body,
 #root div.sc-1gec90z-1.XnQAQ ol li.fgOmrT {
 	border-left: 2px solid var(--border-color);
 	margin-left: 6px;
-		padding-left: 9px;
+	padding-left: 9px;
 }
 
 
@@ -109,7 +157,7 @@ Depth in below can be adjusted to restore selective styles of certain divs from 
 	background: var(--bgcolor-main) !important;
 }
 #root > div > div > div > div > div div a:focus div {
-	background-color: red !important;
+	xbackground-color: red !important;
 }
 
 

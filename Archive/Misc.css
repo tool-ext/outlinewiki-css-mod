@@ -1,0 +1,60 @@
+/*
+
+MAIN SWITCH
+- Page navigation from LEFT to RIGHT
+- Default set by dev is "reverse" instead of row
+*/
+
+.eSMets {
+    flex-direction: row !important; 
+}
+@media (min-width: 100em) {
+    .lcznko {
+        transform: translateX(-5px) !important;
+        xwidth: 0px;
+    }
+}
+
+
+/*
+
+NOT SURE -- maybe TOC
+
+*/
+
+/* Normal width **/
+.dyKbFK {
+    display: block !important;
+}	
+
+
+/*
+
+BODY
+
+*/
+
+
+/* 
+SPACE ABOVE MAIN BODY CONTAINER
+- Default = 6vh
+- Felt too much space above content for me
+*/
+.gJtqqy {
+    margin-top: 3vh; /* Default is 6 so this moves it up a bit */
+}
+@media (min-width: 46.0625em) {
+    /* 
+    MAIN BODY CONTAINER
+    - Default = margin: 4px auto 12px;
+    - By removing the auto the content is aligned to left sidebar
+    - Docusaurus and Archbee still seem to use AUTO but still have a different layout
+    - Investigate how Archee and Docusaurus do it more
+    */
+    .bchuvI, /* First div without TOC */
+    .iHzmWh /* When TOC applied get this */
+    {
+        margin: 4px 0px 12px 3em;
+    }
+}
+
