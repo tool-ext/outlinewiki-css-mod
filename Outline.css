@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,700&display=swap');
+
 /* 
 ----------------------
 LIGHT + GLOBAL
@@ -9,9 +12,16 @@ LIGHT + GLOBAL
     --active-page-sidebar: #e4e4e4;
     --border-color: #e0e0e0;
     --content-link-color: #1567ed;
+    --content-header-color: red;
+    --toc-font-size: 12px;
     --toc-link-color: #5c5c5c;
+	--toc-left-line: 1px solid; /* If want left ver line the length of TOC */
+	--toc-left-padding: 15px;  /* If above is active, add ~15px left padding */
+	--toc-left-padding: 15px;  /* If above is active, add ~15px left padding */
 	--search-input-radius: 4px;
 	--sidebar-invite: none; /* Hides invite link in sidebar */
+	--inter: 'Inter', -apple-system, BlinkMacSystemFont,'Helvetica Neue', sans-serif;
+	--ibm-plex-sans: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont,'Helvetica Neue', sans-serif;
 }
 /* 
 ----------------------
@@ -25,8 +35,43 @@ body[style*="background: rgb(17, 19, 25)"] {
     --border-color: #363636;
     --content-link-color: #5a95f3;
     --toc-link-color: #b3b3b3;
+	--codeblock-bg: #002b36;
+	--codeblock-bg-gutter: #083642;
 }
 
+/* Cloudflare Dark */
+
+/* 
+body[style*="background: rgb(17, 19, 25)"] {
+	--bgcolor-main: #181818;	
+	--bgcolor-sidebar: #272727;		
+	--active-page-sidebar: #363636;	
+	--border-color: none;
+    --content-link-color: #f63;
+    --toc-link-color: #b3b3b3;
+	--codeblock-bg: #313131;
+	--codeblock-bg-gutter: #313131;
+}
+
+#root > div > div > div + div > div > div:nth-of-type(1) > div:nth-of-type(1) {
+	background-color: var(--bgcolor-sidebar) !important;
+}
+#root > div > div > div + div > div > div:nth-of-type(1) > div:nth-of-type(1) > div a {
+	color: orange !important;
+}
+
+*/
+
+
+
+/* 
+----------------------
+FONT
+----------------------
+*/
+body { 
+	font-family: var(--inter); 
+}
 
 /* 
 ----------------------
@@ -47,25 +92,38 @@ CONTENT WIDTH ALTERATION
 	
 }
 
-
 /* 
 ----------------------
-FONT
+BODY > TABLE OF CONTENTS
 ----------------------
 */
 
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,700&display=swap');
-
-
-body {
-  --inter: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  --ibm-plex-sans: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-family: var(--inter);
+#root > div > div > div > div > div > div > div > div a {
+	color: var(--toc-link-color);
+}
+#root > div > div > div + div > div > div.sc-1fsvudc-0.sc-9gqp5-0.PJkw.hpAuij > div.sc-1gec90z-0.TXOLU > div.sc-1gec90z-1.XnQAQ > div {
+	background-color: transparent !important; /* Used GREEN here for testing */	
 }
 
-
+#root div + div h3 {
+	display: none;
+}
+/* NEW - Fulll line on left of TOC */
+#root div + div ol {
+	xborder-left: .7px solid var(--border-color);
+	border-left: var(--toc-left-line) var(--border-color);
+	padding-left: var(--toc-left-padding);
+	margin-top: .5em; /* 1em is default  - pushes it up a bit*/
+}
+#root div + div ol li a {
+	font-size: var(--toc-font-size) !important;
+}
+/* Compresses spacing on TOC a bit */
+#root div + div ol li {
+	padding-top: 0px;
+	padding-bottom: 3px;
+	margin-bottom: 0;	
+}
 
 
 
@@ -110,15 +168,24 @@ BODY > HEADINGS
 /* Targets main page h1 */
 #root > div > div > div > div > div > div > div > div div span[contenteditable="true"] {
 	background: var(--bgcolor-main) !important;	
+	font-size: 1.05em;
+	color: var(--content-header-color) !important;
 }
-/* Main h1 slightly smaller 00 will prov break */
-.kpdBwO {
-    font-size: 2.05em;
+#root > div > div > div.sc-1fsvudc-0.sc-1hw3uqy-1.liVMRS.cKjdQn > div > div.sc-1fsvudc-0.sc-9gqp5-0.PJkw.hpAuij > div.sc-1gec90z-0.TXOLU > div.sc-1gec90z-2.jovcdd > div > div.sc-ebelym-1.kpdBwO {
+	color: red !important;
 }
 
-#root .ProseMirror h2 {
-	xfont-size: 40px;
+/*
+- This works but can't get main title to works
+- Also odd that main title is NOT h1
+*/
+#root .ProseMirror h2,
+#root .ProseMirror h3,
+#root .ProseMirror h4,
+#root .ProseMirror h5 {
+	xcolor: var(--content-header-color) !important;
 }
+
 
 
 
@@ -137,9 +204,6 @@ BODY > LINKS
 	text-decoration-color: var(--content-link-color);
 	text-decoration-thickness: 2px;
 }
-
-
-
 .ProseMirror table th {
     background: var(--bgcolor-sidebar) !important;
 }
@@ -179,12 +243,11 @@ BODY > CODE BLOCKS
 ----------------------
 */
 #root .ProseMirror pre {
-    background: #002b36;
+    background: var(--codeblock-bg);
     font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace;
 }
 #root .code-block.with-line-numbers::after {
-	background: #083642;
-	
+	background: var(--codeblock-bg-gutter);
 }
 
 
@@ -205,48 +268,15 @@ div[role="menu"] > div {
 
 
 
-/* 
-----------------------
-BODY > TABLE OF CONTENTS
-----------------------
-*/
 
-#root > div > div > div > div > div > div > div > div a {
-	color: var(--toc-link-color);
-}
-#xroot div.sc-1gec90z-1.XnQAQ,
-#root > div > div > div + div > div > div.sc-1fsvudc-0.sc-9gqp5-0.PJkw.hpAuij > div.sc-1gec90z-0.TXOLU > div.sc-1gec90z-1.XnQAQ > div {
-	background-color: transparent !important; /* Used GREEN here for testing */	
-}
 
-/* NEW - Fulll line on left of TOC */
-#root div.sc-1gec90z-1.XnQAQ ol {
-	xborder-left: .7px solid var(--border-color);
-	border-left: 2px solid var(--border-color);
-	padding-left: 15px;
-	margin-top: .5em; /* 1em is default  - pushes it up a bit*/
-}
-#root div.sc-1gec90z-1.XnQAQ h3 {
-	display: none;
-}
-#root div.sc-1gec90z-1.XnQAQ ol li a {
-	font-size: 12px !important;
-}
-#root div.sc-1gec90z-1.XnQAQ ol li {
-	padding-top: 0px;
-	padding-bottom: 3px;
-	margin-bottom: 0;	
-}
-#root div.sc-1gec90z-1.XnQAQ ol li.cWyBrm {
-	border-left: 2px solid var(--border-color);
-	margin-left: 6px;
-	padding-left: 9px;
-}
-#root div.sc-1gec90z-1.XnQAQ ol li.fgOmrT {
-	border-left: 2px solid var(--border-color);
-	margin-left: 6px;
-	padding-left: 9px;
-}
+
+
+
+
+
+
+
 
 
 /* 
