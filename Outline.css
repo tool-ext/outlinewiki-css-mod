@@ -23,6 +23,8 @@ LIGHT + GLOBAL
 	--inter: 'Inter', -apple-system, BlinkMacSystemFont,'Helvetica Neue', sans-serif;
 	--ibm-plex-sans: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont,'Helvetica Neue', sans-serif;
 }
+
+
 /* 
 ----------------------
 DARK THEME
@@ -164,16 +166,13 @@ BODY > HEADINGS
 ----------------------
 */
 
-
 /* Targets main page h1 */
 #root > div > div > div > div > div > div > div > div div span[contenteditable="true"] {
 	background: var(--bgcolor-main) !important;	
 	font-size: 1.05em;
 	color: var(--content-header-color) !important;
 }
-#root > div > div > div.sc-1fsvudc-0.sc-1hw3uqy-1.liVMRS.cKjdQn > div > div.sc-1fsvudc-0.sc-9gqp5-0.PJkw.hpAuij > div.sc-1gec90z-0.TXOLU > div.sc-1gec90z-2.jovcdd > div > div.sc-ebelym-1.kpdBwO {
-	color: red !important;
-}
+
 
 /*
 - This works but can't get main title to works
@@ -185,8 +184,6 @@ BODY > HEADINGS
 #root .ProseMirror h5 {
 	xcolor: var(--content-header-color) !important;
 }
-
-
 
 
 /* 
@@ -268,17 +265,6 @@ div[role="menu"] > div {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 /* 
 --- overrides doc list bit which is annoying to target and had been trying stuff like this
 div#DndLiveRegion-0 + div,   
@@ -303,8 +289,6 @@ Using transparent helps clear these
 #root > div > div > div > div > div div a:focus div {
 	xbackground-color: red !important;
 }
-
-
 
 
 /* 
