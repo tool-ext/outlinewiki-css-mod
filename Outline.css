@@ -18,6 +18,12 @@ body[style*="background: rgb(17, 19, 25)"] {
 }
 
 
+
+/* 
+----------------------
+CONTENT WIDTH ALTERATION
+----------------------
+*/
 @media (min-width: 46.0625em) {
 	/*
 	Outline feels like awkward width 
@@ -38,10 +44,17 @@ body[style*="background: rgb(17, 19, 25)"] {
 	
 }
 
+/*
+This applies the custom bg to the menus that appears on hover
+*/
+div[role="menu"] > div {
+	background: var(--bgcolor-main) !important;
+}
+
 
 /* 
 ----------------------
-Header
+HEADER
 ----------------------
 */
 
@@ -55,9 +68,10 @@ Header
 	display: none;
 }
 
+
 /* 
 ----------------------
-Body
+BODY
 ----------------------
 */
 
@@ -96,7 +110,7 @@ body,
 
 /* Targets main page h1 */
 #root > div > div > div > div > div > div > div > div div span[contenteditable="true"] {
-	xbackground: var(--bgcolor-main) !important;	
+	background: var(--bgcolor-main) !important;	
 }
 .ProseMirror p a {
 	color: var(--content-link-color) !important;
@@ -108,10 +122,12 @@ body,
 	text-decoration-thickness: 2px;
 }
 
-/*
-Table of Contents
-
+/* 
+----------------------
+BODY > TABLE OF CONTENTS
+----------------------
 */
+
 #root > div > div > div > div > div > div > div > div a {
 	color: var(--toc-link-color);
 }
@@ -170,7 +186,7 @@ Using transparent helps clear these
 
 /* 
 ----------------------
-Sidebar 
+SIDEBAR
 ----------------------
 */
 #root > div > div > span > div {
