@@ -1,0 +1,10 @@
+// JavaScript to click the button on page load
+document.addEventListener('DOMContentLoaded', function() {
+    // Find the button by class name
+    const button = document.querySelector('.sc-1vta7fu-0');
+    // Check if the button exists
+    if (button) {
+        // Simulate a click on the button
+        button.click();
+    }
+});

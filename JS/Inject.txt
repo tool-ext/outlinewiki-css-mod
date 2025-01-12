@@ -1,0 +1,17 @@
+// Create a new link element
+const linkElement = document.createElement('link');
+linkElement.rel = 'stylesheet';
+linkElement.type = 'text/css';
+
+// Base URL of your remote CSS file
+const cssBaseUrl = 'https://raw.githubusercontent.com/ReessKennedy/CSS-Mods/main/Outline.css';
+
+// Append a timestamp to prevent caching
+const timestamp = new Date().getTime();
+linkElement.href = `${cssBaseUrl}?cache_bust=${timestamp}`;
+
+// Append the link element to the head of the document
+document.head.appendChild(linkElement);
+
+
+

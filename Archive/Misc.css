@@ -1,3 +1,18 @@
+/** Popover thing on right **/
+.dRZDLE {
+    xdisplay: inline-flex;
+    visibility: visible;
+    xposition: absolute;
+    xtop: 4px;
+    xright: 4px;
+    xgap: 4px;
+    xcolor: rgb(155, 166, 178);
+    xtransition: opacity 50ms ease 0s;
+    
+    display: none; /** Remove this and come back to this */
+    height: 24px; /** 24px is default **/
+}
+
 /*
 
 MAIN SWITCH

@@ -1,0 +1,16 @@
+// URL of the CSS file to inject
+const cssUrl = 'https://raw.githubusercontent.com/ReessKennedy/CSS-Mods/main/Outline.css';
+
+// Create a <link> element for the CSS file
+const linkElement = document.createElement('link');
+linkElement.rel = 'stylesheet';
+linkElement.type = 'text/css';
+
+// Append a cache buster parameter with current time in seconds
+const cacheBuster = new Date().getTime() / 1000 | 0; // Current time in seconds
+linkElement.href = `${cssUrl}?v=${cacheBuster}`;
+
+// Append the <link> element to the <head> of the document
+document.addEventListener('DOMContentLoaded', function() {
+    document.head.appendChild(linkElement);
+});

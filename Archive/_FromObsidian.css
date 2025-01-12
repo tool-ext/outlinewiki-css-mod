@@ -1,0 +1,81 @@
+```css
+/*
+Loading this 
+https://docs.surgo.info./../../../CSS%20App%20Mods/Outline%20CSS%20Mods.md
+
+In cloudflare here: 
+https://dash.cloudflare.com/12adc90d5437dd60d4852a9bdc979ca0/surgo.info/apps/view/add-css
+*/
+
+@media (min-width: 46.0625em) {
+
+	.kgqnNt {
+		/- Default = 4px 8px 4px 16px */
+    	xpadding: 4px 8px 2px 16px;
+    	/- Default = 15px */
+    	xfont-size: 12px !important;
+	}
+
+	
+	.kgqnNt svg {
+		xwidth: 16px;
+		xheight: 16px;
+        xdisplay: none;
+	
+	*/
+}
+
+
+
+/- Modify top margin of inline tables */
+.gieQfV .scrollable-wrapper {
+    margin: -1.2em 0px 2em 0px;
+}
+
+@import url('https://rsms.me/inter/inter.css');
+html, p { font-family: 'Inter', sans-serif; }
+
+/- Global link styles */
+#root > div > div > div > div > div > div > div > div > div > div a  {
+	font-weight: 400; /- heavier by 100 than default text */
+	
+    /- Overrides stuff from Outline */
+    text-decoration-line: underline;
+    text-decoration-thickness: initial;
+    text-decoration-style: initial;
+    text-decoration-color: initial;
+}
+
+/- Light mode */
+/- Internal pages */
+body[style*="255"] #root > div > div > div > div > div > div > div > div > div > div a {
+	    xcolor: #1149f2; /- Default link color */
+	color: #0069c2;
+	background: #edf2f7 !important;
+}
+
+/- Dark mode */
+body[style*="19"] #root > div > div > div > div > div > div > div > div > div > div a {
+		 xcolor: #8cb4ff; /- https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Styling_links */
+
+		background: #404142 !important;
+}
+
+
+/- Idea to make visited links purple - remove for now*/
+#root > div > div > div > div > div > div > div > div > div > div a:visited {
+	xcolor: purple;
+}
+
+/- Remove background fussing if external link */
+#root > div > div > div > div > div > div > div > div > div > div a[href^="http"] {
+	background: transparent !important;
+}
+
+@media (min-width: 46.0625em) {
+.kgqnNt {
+    padding: 1px 8px 1px 5px;
+    font-size: 15em;
+    font-size: 13px;
+}    
+}
