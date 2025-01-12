@@ -46,12 +46,12 @@ body[style*="background: rgb(0, 0, 0)"]
 
 /* Cloudflare Dark */
 
-/* 
+
 body[style*="background: rgb(17, 19, 25)"] {
 	--bgcolor-main: #181818;	
 	--bgcolor-sidebar: #272727;		
 	--active-page-sidebar: #363636;	
-	--border-color: none;
+	--border-color: #272727;
     --content-link-color: #f63;
     --toc-link-color: #b3b3b3;
 	--codeblock-bg: #313131;
@@ -64,8 +64,16 @@ body[style*="background: rgb(17, 19, 25)"] {
 #root > div > div > div + div > div > div:nth-of-type(1) > div:nth-of-type(1) > div a {
 	color: orange !important;
 }
-
+/*
+TABLE 
+- Top margin for tables in Outline is -1em and seems should be more
+- Also could use more bottom padding for all
 */
+#root .ProseMirror .table-scrollable {
+    margin-top: -2em;
+	margin-bottom: 8px !important;
+}
+
 
 
 
@@ -110,7 +118,7 @@ BODY > TABLE OF CONTENTS
 	background-color: transparent !important; /* Used GREEN here for testing */	
 }
 
-#root div + div h3 {
+#root > div > div > div > div > div > div > div > div h3 {
 	display: none;
 }
 /* NEW - Fulll line on left of TOC */
