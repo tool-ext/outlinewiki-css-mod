@@ -17,18 +17,6 @@ body[style*="background: rgb(17, 19, 25)"] {
     --toc-link-color: #b3b3b3;
 }
 
-/*
-
-The overall selector for background is aggressive and this overrides it witin the Documents list area to fix a backgrounc color inconsistency
-
-*/
-#root div[aria-label="Documents"] > a:hover div
-{
-    /* Your styles here */
-    background-color: transparent !important;
-    background: transparent !important;
-}
-
 
 @media (min-width: 46.0625em) {
 	/*
