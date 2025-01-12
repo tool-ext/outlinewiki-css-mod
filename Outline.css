@@ -27,14 +27,46 @@ body[style*="background: rgb(17, 19, 25)"] {
     --toc-link-color: #b3b3b3;
 }
 
+
+
+/* 
+----------------------
+Code Blocks
+----------------------
+*/
+
+
+.code-block pre code, code[spellcheck=false]{
+  font-family: ui-monospace, 
+             Menlo, Monaco, 
+             "Cascadia Mono", "Segoe UI Mono", 
+             "Roboto Mono", 
+             "Oxygen Mono", 
+             "Ubuntu Monospace", 
+             "Source Code Pro",
+             "Fira Mono", 
+             "Droid Sans Mono", 
+             "Courier New", monospace;
+  font-size: 75%;
+}
+.code-block pre code {
+  font-size: 12px;
+}
+
 /* 
 ----------------------
 CONTENT WIDTH ALTERATION
 ----------------------
 */
 
+// @import url('https://rsms.me/inter/inter.css');
+
+// html, p { font-family: 'Inter', sans-serif; }
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,700&display=swap');
+
+
 
 body {
   --inter: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -109,6 +141,18 @@ div[role="menu"] > div {
 #root > div > div > div > div > div > div > div > div div span[contenteditable="true"] {
 	background: var(--bgcolor-main) !important;	
 }
+/* 
+----------------------
+Li bullets
+----------------------
+*/
+.ProseMirror li::marker {
+  color: orange;
+  xfont-size: 1em; /* Changing size of li bullets */
+}
+
+
+
 
 
 /* 
@@ -120,11 +164,41 @@ BODY > LINKS
 	color: var(--content-link-color) !important;
 	xtext-underline-offset: auto !important; /* Removes weird Outline offset */
 	font-weight: 500 !important; /* 500 is default */
+	
 }	
 .ProseMirror p a, .ProseMirror p a:hover {
 	text-decoration-color: var(--content-link-color);
 	text-decoration-thickness: 2px;
 }
+
+
+/* Internal vs EXTENRAL pages */
+#root .ProseMirror p a {
+	xbackground: #edf2f7 !important;
+	xbackground-color: red !important;
+}
+/* External links variation */
+#root .ProseMirror p a[href^="http"] { position: relative; }
+#root .ProseMirror p a[href^="http"]::after {
+    content: '↗'; /* Use an external link icon of your choice */
+    margin-left: 0.3em; /* Add spacing between the link text and the icon */
+    font-size: 0.9em; /* Adjust size to your preference */
+    vertical-align: middle; /* Align the icon properly with the text */
+    display: inline-block;
+    transform: translateY(1px); /* Optional: fine-tune alignment */
+}
+
+
+/* 
+----------------------
+HEADINGS
+----------------------
+*/
+
+#root .ProseMirror h2 {
+	xfont-size: 40px;
+}
+
 
 /* 
 ----------------------
@@ -139,6 +213,17 @@ BODY > TABLE OF CONTENTS
 #root > div > div > div + div > div > div.sc-1fsvudc-0.sc-9gqp5-0.PJkw.hpAuij > div.sc-1gec90z-0.TXOLU > div.sc-1gec90z-1.XnQAQ > div {
 	background-color: transparent !important; /* Used GREEN here for testing */	
 }
+
+/* NEW - Fulll line on left of TOC */
+#root div.sc-1gec90z-1.XnQAQ ol {
+	xborder-left: .7px solid var(--border-color);
+	border-left: 2px solid var(--border-color);
+	padding-left: 15px;
+	margin-top: .5em; /* 1em is default  - pushes it up a bit*/
+}
+
+
+
 #root div.sc-1gec90z-1.XnQAQ h3 {
 	display: none;
 }
@@ -185,6 +270,15 @@ Using transparent helps clear these
 }
 #root > div > div > div > div > div div a:focus div {
 	xbackground-color: red !important;
+}
+
+/* The title */
+[class^='EditableTitle__Title'] {
+  font-weight: bold;
+  font-size: 8rem;
+  color: #1f7ae0;
+  -webkit-text-fill-color: #1f7ae0;
+  margin-left: 0;
 }
 
 

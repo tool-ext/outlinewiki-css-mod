@@ -1,32 +1,3 @@
-/* ADDED - Sidebar right border vertical line */
-.bXUpps {
-	border-left: 1px solid #e7e7e9;
-}
-.sc-tyaw0p-3.fViyjE {
-	xpadding-left: 25px !important;	/* Was 44px - Reduced it */
-}
-/* Section headers in sidebar */
-.bZKFnA {
-    font-size: 12px; /**  **/
-    font-weight: 600;  /** 600 to 500 **/
-    letter-spacing: 0.02em;
-}
-/* MAIN other LI element highlight test */
-.sc-glkm6c-0 {
- xborder: 1px solid red;   
-}
-@media (min-width: 46.0625em) {
-	/* Spacing between sidebar LI elements */
-    .kKzjdi /* light mode */
-    {
-        padding: 1px 10px 1px 10px;
-        xfont-size: 13px;
-    }
-
-}
-.kFIuxx { 
-    line-height: 20px; /** From 24px **/
-}
 /*
 ICONS
 */
@@ -52,3 +23,5 @@ ICONS
 .kKzjdi {
     min-height: 20px;
 }    
+
+
