@@ -29,8 +29,11 @@ LIGHT + GLOBAL
 ----------------------
 DARK THEME
 ----------------------
+Apparently two backgrounds ... 
 */
-body[style*="background: rgb(17, 19, 25)"] {
+body[style*="background: rgb(17, 19, 25)"], 
+body[style*="background: rgb(0, 0, 0)"]
+{
     --bgcolor-main: #1e1e1e;				/* green */
     --bgcolor-sidebar: #262626;			/* blue */
     --active-page-sidebar: #363636;		/* yellow */
