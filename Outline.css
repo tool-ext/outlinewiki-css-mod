@@ -28,52 +28,6 @@ body[style*="background: rgb(17, 19, 25)"] {
 }
 
 
-
-/* 
-----------------------
-Code Blocks
-----------------------
-*/
-
-
-.code-block pre code, code[spellcheck=false]{
-  font-family: ui-monospace, 
-             Menlo, Monaco, 
-             "Cascadia Mono", "Segoe UI Mono", 
-             "Roboto Mono", 
-             "Oxygen Mono", 
-             "Ubuntu Monospace", 
-             "Source Code Pro",
-             "Fira Mono", 
-             "Droid Sans Mono", 
-             "Courier New", monospace;
-  font-size: 75%;
-}
-.code-block pre code {
-  font-size: 12px;
-}
-
-/* 
-----------------------
-CONTENT WIDTH ALTERATION
-----------------------
-*/
-
-// @import url('https://rsms.me/inter/inter.css');
-
-// html, p { font-family: 'Inter', sans-serif; }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,700&display=swap');
-
-
-
-body {
-  --inter: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  --ibm-plex-sans: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-family: var(--inter);
-}
-
 /* 
 ----------------------
 CONTENT WIDTH ALTERATION
@@ -92,6 +46,26 @@ CONTENT WIDTH ALTERATION
 	}
 	
 }
+
+
+/* 
+----------------------
+Font
+----------------------
+*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,700&display=swap');
+
+
+body {
+  --inter: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --ibm-plex-sans: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: var(--inter);
+}
+
+
 /* 
 ----------------------
 HEADER
@@ -141,9 +115,11 @@ div[role="menu"] > div {
 #root > div > div > div > div > div > div > div > div div span[contenteditable="true"] {
 	background: var(--bgcolor-main) !important;	
 }
+
+
 /* 
 ----------------------
-Li bullets
+BODY > Li bullets
 ----------------------
 */
 .ProseMirror li::marker {
@@ -152,6 +128,17 @@ Li bullets
 }
 
 
+
+
+/* 
+----------------------
+BODY > HEADINGS
+----------------------
+*/
+
+#root .ProseMirror h2 {
+	xfont-size: 40px;
+}
 
 
 
@@ -189,15 +176,18 @@ BODY > LINKS
 }
 
 
+
 /* 
 ----------------------
-HEADINGS
+BODY > Code Blocks
 ----------------------
 */
-
-#root .ProseMirror h2 {
-	xfont-size: 40px;
+#root .ProseMirror pre {
+    background: #002b36;
+    font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace;
 }
+
+
 
 
 /* 
@@ -221,9 +211,6 @@ BODY > TABLE OF CONTENTS
 	padding-left: 15px;
 	margin-top: .5em; /* 1em is default  - pushes it up a bit*/
 }
-
-
-
 #root div.sc-1gec90z-1.XnQAQ h3 {
 	display: none;
 }
@@ -298,6 +285,9 @@ LEFT SIDEBAR
     /* xborder-right removed as it appears unused */
     xborder-right: 1px solid red;
     box-shadow: inset -1px 0 0 0 var(--border-color) !important;
+}
+#root > div > div > span > div button:hover {
+	background: red !important;
 }
 
 /* Highlight Active Links */
