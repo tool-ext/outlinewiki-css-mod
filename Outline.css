@@ -17,6 +17,18 @@ body[style*="background: rgb(17, 19, 25)"] {
     --toc-link-color: #b3b3b3;
 }
 
+/*
+
+The overall selector for background is aggressive and this overrides it witin the Documents list area to fix a backgrounc color inconsistency
+
+*/
+#root div[aria-label="Documents"] > a:hover div
+{
+    /* Your styles here */
+    background-color: transparent !important;
+    background: transparent !important;
+}
+
 
 @media (min-width: 46.0625em) {
 	/*
@@ -96,13 +108,16 @@ body,
 
 /* Targets main page h1 */
 #root > div > div > div > div > div > div > div > div div span[contenteditable="true"] {
-	background: var(--bgcolor-main) !important;	
+	xbackground: var(--bgcolor-main) !important;	
 }
 .ProseMirror p a {
 	color: var(--content-link-color) !important;
+	xtext-underline-offset: auto !important; /* Removes weird Outline offset */
+	
 }	
 .ProseMirror p a, .ProseMirror p a:hover {
 	text-decoration-color: var(--content-link-color);
+	text-decoration-thickness: 2px;
 }
 
 /*
@@ -153,8 +168,12 @@ But final below seems best
 
 Depth in below can be adjusted to restore selective styles of certain divs from original theme
 */
+/*
+This had used the theme background color but it caused probs
+Using transparent helps clear these
+*/
 #root > div > div > div > div > div div {
-	background: var(--bgcolor-main) !important;
+	background: transparent !important;
 }
 #root > div > div > div > div > div div a:focus div {
 	xbackground-color: red !important;
