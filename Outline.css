@@ -50,7 +50,7 @@ CONTENT WIDTH ALTERATION
 
 /* 
 ----------------------
-Font
+FONT
 ----------------------
 */
 
@@ -64,6 +64,9 @@ body {
   --ibm-plex-sans: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-family: var(--inter);
 }
+
+
+
 
 
 /* 
@@ -96,45 +99,22 @@ body,
 }
 
 
-/*
-This applies the custom bg to the menus that appears on hover
-*/
-div[role="menu"] > div {
-	background: var(--bgcolor-main) !important;
-}
-
-/* Fixed color in popover but will probably break */
-.gPQRQj::before {
-	background: var(--bgcolor-main) !important;
-}
-/* Main h1 slightly smaller */
-.kpdBwO {
-    font-size: 2.05em;
-}
-/* Targets main page h1 */
-#root > div > div > div > div > div > div > div > div div span[contenteditable="true"] {
-	background: var(--bgcolor-main) !important;	
-}
-
-
-/* 
-----------------------
-BODY > Li bullets
-----------------------
-*/
-.ProseMirror li::marker {
-  color: orange;
-  xfont-size: 1em; /* Changing size of li bullets */
-}
-
-
-
 
 /* 
 ----------------------
 BODY > HEADINGS
 ----------------------
 */
+
+
+/* Targets main page h1 */
+#root > div > div > div > div > div > div > div > div div span[contenteditable="true"] {
+	background: var(--bgcolor-main) !important;	
+}
+/* Main h1 slightly smaller 00 will prov break */
+.kpdBwO {
+    font-size: 2.05em;
+}
 
 #root .ProseMirror h2 {
 	xfont-size: 40px;
@@ -159,6 +139,12 @@ BODY > LINKS
 }
 
 
+
+.ProseMirror table th {
+    background: var(--bgcolor-sidebar) !important;
+}
+
+
 /* Internal vs EXTENRAL pages */
 #root .ProseMirror p a {
 	xbackground: #edf2f7 !important;
@@ -176,17 +162,46 @@ BODY > LINKS
 }
 
 
+/* 
+----------------------
+BODY > LI BULLETS
+----------------------
+*/
+.ProseMirror li::marker {
+  color: orange;
+  xfont-size: 1em; /* Changing size of li bullets */
+}
+
 
 /* 
 ----------------------
-BODY > Code Blocks
+BODY > CODE BLOCKS
 ----------------------
 */
 #root .ProseMirror pre {
     background: #002b36;
     font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace;
 }
+#root .code-block.with-line-numbers::after {
+	background: #083642;
+	
+}
 
+
+/* 
+----------------------
+BODY > OVER POP MENUS
+This applies the custom bg to the menus that appears on hover
+----------------------
+*/
+div[role="menu"] > div {
+	background: var(--bgcolor-main) !important;
+}
+
+/* Fixed color in popover but will probably break */
+.gPQRQj::before {
+	background: var(--bgcolor-main) !important;
+}
 
 
 
@@ -259,14 +274,7 @@ Using transparent helps clear these
 	xbackground-color: red !important;
 }
 
-/* The title */
-[class^='EditableTitle__Title'] {
-  font-weight: bold;
-  font-size: 8rem;
-  color: #1f7ae0;
-  -webkit-text-fill-color: #1f7ae0;
-  margin-left: 0;
-}
+
 
 
 /* 
