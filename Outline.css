@@ -20,8 +20,9 @@ LIGHT + GLOBAL
 	--toc-left-padding: 15px;  /* If above is active, add ~15px left padding */
 	--search-input-radius: 4px;
 	--sidebar-invite: none; /* Hides invite link in sidebar */
-	--inter: 'Inter', -apple-system, BlinkMacSystemFont,'Helvetica Neue', sans-serif;
-	--ibm-plex-sans: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont,'Helvetica Neue', sans-serif;
+	/* IDeas - IBM Plex Sans */
+	--font-global: 'Inter', -apple-system, BlinkMacSystemFont,'Helvetica Neue', sans-serif;
+
 }
 
 
@@ -42,12 +43,9 @@ body[style*="background: rgb(0, 0, 0)"]
     --toc-link-color: #b3b3b3;
 	--codeblock-bg: #002b36;
 	--codeblock-bg-gutter: #083642;
-}
-
-/* Cloudflare Dark */
-
-
-body[style*="background: rgb(17, 19, 25)"] {
+	
+	/* CLOUDFLARE  */
+	/*
 	--bgcolor-main: #181818;	
 	--bgcolor-sidebar: #272727;		
 	--active-page-sidebar: #363636;	
@@ -56,13 +54,28 @@ body[style*="background: rgb(17, 19, 25)"] {
     --toc-link-color: #b3b3b3;
 	--codeblock-bg: #313131;
 	--codeblock-bg-gutter: #313131;
+	*/
+
+	/* CHATGPT  */
+   /*
+	--bgcolor-main: #212121;	
+	--bgcolor-sidebar: #171717;	
+	--codeblock-bg: #0d0d0d;
+	--codeblock-bg-gutter: #2f2f2f;
+	--border-color: #171717;
+	
+   */
+	
+	
 }
 
+
+
 #root > div > div > div + div > div > div:nth-of-type(1) > div:nth-of-type(1) {
-	background-color: var(--bgcolor-sidebar) !important;
+	xbackground-color: var(--bgcolor-sidebar) !important;
 }
 #root > div > div > div + div > div > div:nth-of-type(1) > div:nth-of-type(1) > div a {
-	color: orange !important;
+	xcolor: orange !important;
 }
 /*
 TABLE 
@@ -83,7 +96,7 @@ FONT
 ----------------------
 */
 body { 
-	font-family: var(--inter); 
+	font-family: var(--font-global); 
 }
 
 /* 
@@ -111,28 +124,27 @@ BODY > TABLE OF CONTENTS
 ----------------------
 */
 
-#root > div > div > div > div > div > div > div > div a {
+#root > div > div > div + div > div > div > div > div:nth-of-type(1) > div a {
 	color: var(--toc-link-color);
 }
-#root > div > div > div + div > div > div.sc-1fsvudc-0.sc-9gqp5-0.PJkw.hpAuij > div.sc-1gec90z-0.TXOLU > div.sc-1gec90z-1.XnQAQ > div {
+#root > div > div > div + div > div > div > div > div:nth-of-type(1) > div {
 	background-color: transparent !important; /* Used GREEN here for testing */	
 }
-
-#root > div > div > div > div > div > div > div > div h3 {
+#root > div > div > div + div > div > div > div > div:nth-of-type(1) > div h3 {
 	display: none;
 }
 /* NEW - Fulll line on left of TOC */
-#root div + div ol {
+#root > div > div > div + div > div > div > div > div:nth-of-type(1) > div ol {
 	xborder-left: .7px solid var(--border-color);
 	border-left: var(--toc-left-line) var(--border-color);
 	padding-left: var(--toc-left-padding);
 	margin-top: .5em; /* 1em is default  - pushes it up a bit*/
 }
-#root div + div ol li a {
+#root > div > div > div + div > div > div > div > div:nth-of-type(1) > div ol li a {
 	font-size: var(--toc-font-size) !important;
 }
 /* Compresses spacing on TOC a bit */
-#root div + div ol li {
+#root > div > div > div + div > div > div > div > div:nth-of-type(1) > div ol li {
 	padding-top: 0px;
 	padding-bottom: 3px;
 	margin-bottom: 0;	
