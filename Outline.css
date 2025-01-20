@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 // @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,700&display=swap');
 
+
+#id-mtsiqn {
+	xbackground-color: red !important;	
+}
+
 /* 
 ----------------------
 LIGHT + GLOBAL
@@ -36,6 +41,7 @@ body[style*="background: rgb(17, 19, 25)"],
 body[style*="background: rgb(0, 0, 0)"]
 {
     --bgcolor-main: #1e1e1e;				/* green */
+    --bgcolor-popups: #000;
     --bgcolor-sidebar: #262626;			/* blue */
     --active-page-sidebar: #363636;		/* yellow */
     --border-color: #363636;
@@ -131,7 +137,7 @@ BODY > TABLE OF CONTENTS
 	background-color: transparent !important; /* Used GREEN here for testing */	
 }
 #root > div > div > div + div > div > div > div > div:nth-of-type(1) > div h3 {
-	display: none;
+	xdisplay: none;
 }
 /* NEW - Fulll line on left of TOC */
 #root > div > div > div + div > div > div > div > div:nth-of-type(1) > div ol {
@@ -149,6 +155,10 @@ BODY > TABLE OF CONTENTS
 	padding-bottom: 3px;
 	margin-bottom: 0;	
 }
+
+
+
+
 
 
 
@@ -170,16 +180,72 @@ Main body
 Not sure all ar necessary but it works
 */
 body,
-#root > div,
-#root > div > div,
-#root > div > div > div,
+// #root > div,
+// #root > div > div,
+// #root > div > div > div,
 #root > div > div > div > div,
-#root > div > div > div > div > div,
+// #root > div > div > div > div > div,
 #root > div > div > div > div:before,
 /* Fixes Content Editable areas that had black bgs */
 {
 	background: var(--bgcolor-main) !important;
+
 }
+
+/*
+Popup menus
+- preferences
+- newdoc
+- page settings
+- code settings
+*/
+div[role="menu"] > div {
+	background-color: var(--bgcolor-popups) !important;
+	filter: brightness(80%); 
+}
+xdiv[role="dialog"],
+div[role="dialog"] > div,
+div[role="dialog"] > div div
+{
+	background-color: var(--bgcolor-popups) !important;
+}		
+
+#root  div[role="dialog"] > div > div > div::before {
+    background-color: var(--bgcolor-popups) !important;
+    xfilter: brightness(80%); 
+}
+
+
+/** BODY - Table */
+#root > div > div > div > div > div th,
+#root > div > div > div > div > div td {
+	background: transparent !important;
+}
+
+/* BODY - Docs List - HEADER 
+Tried setting to a color but it changed the scrollbar as well, oddly .. 
+*/
+#root > div > div > div:nth-of-type(2) > div > div:nth-of-type(2) > div > div + div > div:nth-of-type(1) {
+	background: transparent !important;
+}
+
+/* BODY - Docs List - BODY */
+#root > div > div > div:nth-of-type(2) > div > div:nth-of-type(2) > div > div + div {
+	background: transparent !important;
+}
+
+/* BODY - Docs List - HEADER and OTHER SPOTS */
+#root > div > div > div + div > div > div + div > div > div {
+	background: transparent !important;
+}
+#root > div > div > div + div > div > div.sc-1fsvudc-0.sc-fuzaxe-2.jvEVwV.fnaOAQ {
+	background-color: transparent !important;
+}
+
+
+
+
+
 
 
 
@@ -268,49 +334,6 @@ BODY > CODE BLOCKS
 }
 #root .code-block.with-line-numbers::after {
 	background: var(--codeblock-bg-gutter);
-}
-
-
-/* 
-----------------------
-BODY > OVER POP MENUS
-This applies the custom bg to the menus that appears on hover
-----------------------
-*/
-div[role="menu"] > div {
-	background: var(--bgcolor-main) !important;
-}
-
-/* Fixed color in popover but will probably break */
-.gPQRQj::before {
-	background: var(--bgcolor-main) !important;
-}
-
-
-
-/* 
---- overrides doc list bit which is annoying to target and had been trying stuff like this
-div#DndLiveRegion-0 + div,   
-div#DndLiveRegion-0 + div > div,
-div#DndLiveRegion-1 + div + div + div { }
-}
-
-And also tried this: 
-#root > div > div > div > div > div > div > div
-
-But final below seems best
-
-Depth in below can be adjusted to restore selective styles of certain divs from original theme
-*/
-/*
-This had used the theme background color but it caused probs
-Using transparent helps clear these
-*/
-#root > div > div > div > div > div div {
-	background: transparent !important;
-}
-#root > div > div > div > div > div div a:focus div {
-	xbackground-color: red !important;
 }
 
 
