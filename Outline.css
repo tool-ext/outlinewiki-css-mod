@@ -6,6 +6,7 @@
 	xbackground-color: red !important;	
 }
 
+
 /* 
 ----------------------
 LIGHT + GLOBAL
@@ -155,6 +156,25 @@ BODY > TABLE OF CONTENTS
 	padding-bottom: 3px;
 	margin-bottom: 0;	
 }
+
+
+/* 
+TOP OF BODY HEADER
+- Had to override sibling here if you make header a diff color so addded second
+*/
+
+#skip-nav + div > div > div > div {
+	background: transparent !important;
+}
+#skip-nav + div > div > div > div + div {
+	background: transparent !important;
+}
+
+
+#skip-nav + div > div > div > div + div span > div {
+	background: transparent !important;
+}
+
 
 
 
@@ -335,6 +355,11 @@ BODY > CODE BLOCKS
 #root .code-block.with-line-numbers::after {
 	background: var(--codeblock-bg-gutter);
 }
+
+
+
+
+
 
 
 /* 
