@@ -1,0 +1,4 @@
+.cursorindexingignore
+.specstory
+.specstory/
+.specstory/*
