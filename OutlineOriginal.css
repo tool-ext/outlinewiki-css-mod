@@ -237,19 +237,11 @@ BODY
 */
 /* 
 Main body 
-Not sure all ar necessary but it works
 */
 body,
-// #root > div,
-// #root > div > div,
-// #root > div > div > div,
 #root > div > div > div > div,
-// #root > div > div > div > div > div,
-#root > div > div > div > div:before,
-/* Fixes Content Editable areas that had black bgs */
-{
+#root > div > div > div > div:before {
 	background: var(--bgcolor-main) !important;
-
 }
 
 /*
