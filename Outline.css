@@ -1,6 +1,7 @@
+/*
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,700&display=swap');
-
+*/
 
 
 /* 
@@ -18,77 +19,6 @@
 
 
 */
-
-/* 
-----------------------
-LIGHT + GLOBAL
-----------------------
-*/
-:root {
-    --bgcolor-main: #ffffff; 
-    --bgcolor-sidebar: #f6f6f6;
-    --active-page-sidebar: #e4e4e4;
-    --border-color: #e0e0e0;
-    --content-link-color: #1567ed;
-    --content-header-color: red;
-    --toc-font-size: 12px;
-    --toc-link-color: #5c5c5c;
-	--toc-left-line: 1px solid; /* If want left ver line the length of TOC */
-	--toc-left-padding: 15px;  /* If above is active, add ~15px left padding */
-	--toc-left-padding: 15px;  /* If above is active, add ~15px left padding */
-	--search-input-radius: 4px;
-	--sidebar-invite: none; /* Hides invite link in sidebar */
-	/* IDeas - IBM Plex Sans */
-	--font-global: 'Inter', -apple-system, BlinkMacSystemFont,'Helvetica Neue', sans-serif;
-
-}
-
-
-/* 
-----------------------
-DARK THEME
-----------------------
-Apparently two backgrounds ... 
-*/
-body[style*="background: rgb(17, 19, 25)"], 
-body[style*="background: rgb(0, 0, 0)"]
-{
-    --bgcolor-main: #1e1e1e;				/* green */
-    --bgcolor-popups: #000;
-    --bgcolor-sidebar: #262626;			/* blue */
-    --active-page-sidebar: #363636;		/* yellow */
-    --border-color: #363636;
-    --content-link-color: #5a95f3;
-    --toc-link-color: #b3b3b3;
-	--codeblock-bg: #002b36;
-	--codeblock-bg-gutter: #083642;
-
-	--sidebar-link-color: #b3b3b3;
-	
-	/* CLOUDFLARE  */
-	/*
-	--bgcolor-main: #181818;	
-	--bgcolor-sidebar: #272727;		
-	--active-page-sidebar: #363636;	
-	--border-color: #272727;
-    --content-link-color: #f63;
-    --toc-link-color: #b3b3b3;
-	--codeblock-bg: #313131;
-	--codeblock-bg-gutter: #313131;
-	*/
-
-	/* CHATGPT  */
-   /*
-	--bgcolor-main: #212121;	
-	--bgcolor-sidebar: #171717;	
-	--codeblock-bg: #0d0d0d;
-	--codeblock-bg-gutter: #2f2f2f;
-	--border-color: #171717;
-	
-   */
-	
-	
-}
 
 
 
@@ -445,6 +375,16 @@ body,
 	background: var(--bgcolor-main) !important;
 }
 
+
+#root > div > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > span {
+	font-size: var(--content-h1-size) !important;
+} 
+#root > div > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) {
+	margin-top: var(--content-h1-margin-top) !important;
+	margin-bottom: var(--content-h1-margin-bottom) !important;
+} 
+
+
 /*
 
 REMOVED POPUP SECTION 
@@ -523,7 +463,6 @@ BODY > HEADINGS
 #root > div > div > div > div > div > div > div > div div span[contenteditable="true"] {
 	background: var(--bgcolor-main) !important;	
 	font-size: 1.05em;
-	color: var(--content-header-color) !important;
 }
 
 
@@ -535,7 +474,7 @@ BODY > HEADINGS
 #root .ProseMirror h3,
 #root .ProseMirror h4,
 #root .ProseMirror h5 {
-	xcolor: var(--content-header-color) !important;
+	color: var(--content-header-color) !important;
 }
 
 
@@ -627,7 +566,21 @@ BODY > CODE BLOCKS
                                                                                         
 
 ----------------------
+
+}
 */
+	
+body {
+	scrollbar-color: #363636 transparent;
+}
+/* I like th addition of these lines */
+#sidebar > div:nth-of-type(3) {
+    scrollbar-color: #363636 transparent;
+	border-top: 1px solid var(--border-color) !important;
+	xborder-bottom: 1px solid var(--border-color) !important;
+}
+
+
 #root > div > div > span > div > div > div:nth-child(5) > div + div { display: var(--sidebar-invite); } 
 
 #root > div > div > span > div {

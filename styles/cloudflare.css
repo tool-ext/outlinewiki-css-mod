@@ -1,0 +1,39 @@
+:root {
+    --toc-font-size: 12px;
+    --toc-left-padding: 15px; /* If above is active, add ~15px left padding */
+    --search-input-radius: 4px;
+    --sidebar-invite: none; /* Hides invite link in sidebar */
+    --font-global: Inter, -apple-system, BlinkMacSystemFont,Helvetica Neue, sans-serif; /* IDeas - IBM Plex Sans */
+    --content-h1-size: .90em;
+    --content-h1-margin-top: 1vh;
+    --content-h1-margin-bottom: 0.5em;
+    --content-header-color: red; /* Content header color */
+    --bgcolor-main: #ffffff; /* Main background color */
+    --bgcolor-sidebar: #f6f6f6; /* Sidebar background color */
+    --active-page-sidebar: #e4e4e4; /* Active sidebar page color */
+    --border-color: #e0e0e0; /* Border color */
+    --content-link-color: #1567ed; /* Content link color */
+    --toc-link-color: #1567ed;
+    --toc-left-line: 1px solid; /* If want left ver line the length of TOC */
+    --bgcolor-popups: #ffffff;
+    --codeblock-bg: #ddd;
+    --codeblock-bg-gutter: #ddd;
+    --sidebar-link-color: #1567ed;
+  }
+  
+  body[style*="background: rgb(17, 19, 25)"],
+  body[style*="background: rgb(0, 0, 0)"]
+  {
+    --content-header-color: #ffffff; /* Content header color */
+    --bgcolor-main: #181818; /* Main background color */
+    --bgcolor-sidebar: #272727; /* Sidebar background color */
+    --active-page-sidebar: var(--bgcolor-main); /* Active sidebar page color */
+    --border-color: #363636; /* Border color */
+    --content-link-color: #f6821f; /* Content link color */
+    --toc-link-color: #b3b3b3;
+    --toc-left-line: var(--border-color); /* If want left ver line the length of TOC */
+    --bgcolor-popups: #181818;
+    --codeblock-bg: #b3b3b3;
+    --codeblock-bg-gutter: #083642;
+    --sidebar-link-color: #b3b3b3;
+  }
