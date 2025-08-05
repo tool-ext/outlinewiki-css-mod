@@ -25,6 +25,10 @@
 
 
 
+
+
+
+
 /* Boyx - another backlink header in body */
 #root > div > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(4) > div > div:nth-of-type(1) {
 	background-color: var(--bgcolor-main) !important;
@@ -291,9 +295,42 @@ BODY > TABLE OF CONTENTS
 ----------------------
 */
 
+
+/* BODY - TOC */
+
+html > body > div:nth-of-type(1) > div > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) {
+	margin-top: var(--toc-margin-top) !important;
+	border-left: 1px solid var(--border-color);
+}
+html > body > div:nth-of-type(1) > div > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) li {
+	xborder: 1px solid red;
+	margin-bottom: 3px !important;
+} 
+html > body > div:nth-of-type(1) > div > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) a {
+	color: #8b8b8b;
+	font-size: 80%;
+}
+html > body > div:nth-of-type(1) > div > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) a:hover {
+	color: #fff !important;
+}	
+html > body > div:nth-of-type(1) > div > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) h3 {
+	display: none !important;
+}
+
+
+
+html > body > div:nth-of-type(1) > div > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > ol > li {
+	background-color: red !important;
+	background: red !important;
+} 
+
+
+
+
 #root > div > div > div + div > div > div > div > div:nth-of-type(1) > div a {
 	color: var(--toc-link-color);
 }
+
 #root > div > div > div + div > div > div > div > div:nth-of-type(1) > div {
 	background-color: transparent !important; /* Used GREEN here for testing */	
 }
@@ -309,6 +346,7 @@ BODY > TABLE OF CONTENTS
 }
 #root > div > div > div + div > div > div > div > div:nth-of-type(1) > div ol li a {
 	font-size: var(--toc-font-size) !important;
+
 }
 /* Compresses spacing on TOC a bit */
 #root > div > div > div + div > div > div > div > div:nth-of-type(1) > div ol li {
@@ -426,6 +464,11 @@ div[role="dialog"] > div div
 	background: transparent !important;
 }
 
+#root > div > div > div > div > div th {
+	color: var(--table-th-color) !important;
+	font-weight: 800 !important;
+}
+
 /* BODY - Docs List - HEADER 
 Tried setting to a color but it changed the scrollbar as well, oddly .. 
 */
@@ -445,6 +488,7 @@ Tried setting to a color but it changed the scrollbar as well, oddly ..
 #root > div > div > div + div > div > div.sc-1fsvudc-0.sc-fuzaxe-2.jvEVwV.fnaOAQ {
 	background-color: transparent !important;
 }
+
 
 
 

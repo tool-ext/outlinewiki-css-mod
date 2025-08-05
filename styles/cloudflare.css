@@ -19,6 +19,7 @@
   --codeblock-bg: #ffffff;
   --codeblock-bg-gutter: #ddd;
   --sidebar-link-color: #1567ed;
+  --table-th-color: #000;
 }
 
 body[style*="background: rgb(17, 19, 25)"],
@@ -36,4 +37,5 @@ body[style*="background: rgb(0, 0, 0)"]
   --codeblock-bg: #313131;
   --codeblock-bg-gutter: #313131;
   --sidebar-link-color: #b3b3b3;
+  --table-th-color: #ffffff;
 }
