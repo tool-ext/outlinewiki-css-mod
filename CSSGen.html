@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Sheets to CSS Variables</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+    }
+
+    pre {
+      background-color: #f4f4f4;
+      padding: 15px;
+      border-radius: 5px;
+      overflow-x: auto;
+      font-size: .8rem;
+      background: #333;
+      color:#fff;
+    }
+
+    code {
+      font-family: "Courier New", Courier, monospace;
+      white-space: pre-wrap;
+    }
+
+    button {
+      margin-bottom: 20px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h2>Generated CSS Variables:</h2>
+  <button onclick="copyToClipboard()">Copy to Clipboard</button>
+  <pre><code id="css-output"></code></pre>
+
+  <script>
+    async function fetchSheetData() {
+      const url = 'https://docs.google.com/spreadsheets/d/1uxV0gpVdHfWw-npHWBJcphlmZqr_-H90UOuFnc-R4Ko/export?format=csv&gid=346244393';
+      // Configuration: Adjust the settings here
+      const startRow = 3; // Set the row number to start from
+      const commentColumn = 'A'; // Column letter for comments
+      const categoryColumn = 'B'; // Column letter for category
+      const varNameColumn = 'C'; // Column letter for CSS variable names
+      const varValueColumn = 'D'; // Column letter for light/global CSS variable values
+      const varDarkValueOffset = 1; // Offset by 1 column for the dark theme values
+
+      // Function to convert column letters to numeric indices (0-based)
+      function columnLetterToIndex(letter) {
+        return letter.toUpperCase().charCodeAt(0) - 65; // 'A' is 65 in ASCII
+      }
+
+      // Convert column letters to indices
+      const commentColumnIndex = columnLetterToIndex(commentColumn);
+      const categoryColumnIndex = columnLetterToIndex(categoryColumn);
+      const varNameColumnIndex = columnLetterToIndex(varNameColumn);
+      const varValueColumnIndex = columnLetterToIndex(varValueColumn);
+      const varDarkValueColumnIndex = varValueColumnIndex + varDarkValueOffset;
+
+      const response = await fetch(url);
+      const data = await response.text();
+
+      // Robust CSV parsing function to handle quotes and commas correctly
+      function parseCSV(csvText) {
+        const rows = [];
+        const lines = csvText.split('\n');
+
+        for (const line of lines) {
+          const columns = [];
+          let current = '';
+          let insideQuotes = false;
+
+          for (let i = 0; i < line.length; i++) {
+            const char = line[i];
+            if (char === '"' && (i === 0 || line[i - 1] !== '\\')) {
+              insideQuotes = !insideQuotes; // Toggle insideQuotes when encountering non-escaped double quotes
+            } else if (char === ',' && !insideQuotes) {
+              columns.push(current.trim());
+              current = '';
+            } else {
+              current += char;
+            }
+          }
+          columns.push(current.trim()); // Add the last column after the loop
+          rows.push(columns);
+        }
+        return rows;
+      }
+
+      // Parse the CSV data
+      const rows = parseCSV(data);
+
+      let globalVars = '';
+      let lightVars = '';
+      let darkVars = '';
+
+      // Loop through rows starting from the defined startRow
+      for (let i = startRow - 1; i < rows.length; i++) {
+        const row = rows[i];
+        const comment = row[commentColumnIndex]?.trim();
+        const category = row[categoryColumnIndex]?.trim().toLowerCase();
+        const name = row[varNameColumnIndex]?.trim();
+        const value = row[varValueColumnIndex]?.trim();
+        const darkValue = row[varDarkValueColumnIndex]?.trim();
+
+        // Create the comment if there's a value in the comment column
+        const commentText = comment ? ` /* ${comment} */` : '';
+
+        if (name && value) {
+          if (category === 'global') {
+            globalVars += `  --${name}: ${value};${commentText}\n`;
+          } else if (category === 'light') {
+            lightVars += `  --${name}: ${value};${commentText}\n`;
+          }
+
+          // Only include the variable in the "Slate" section if a darkValue is defined
+          if (darkValue) {
+            darkVars += `  --${name}: ${darkValue};${commentText}\n`;
+          }
+        }
+      }
+
+      // Generate the final CSS output
+      const cssOutput = `
+:root {
+${lightVars}}
+
+body[style*="background: rgb(17, 19, 25)"],
+body[style*="background: rgb(0, 0, 0)"]
+{
+${darkVars}}`;
+
+      // Display the generated CSS variables in a code block
+      document.getElementById('css-output').textContent = cssOutput.trim();
+    }
+
+    // Function to copy the code to the clipboard
+    function copyToClipboard() {
+      const codeElement = document.getElementById('css-output');
+      const range = document.createRange();
+      range.selectNode(codeElement);
+      window.getSelection().removeAllRanges();
+      window.getSelection().addRange(range);
+      document.execCommand('copy');
+      window.getSelection().removeAllRanges();
+
+      // Provide feedback to the user
+      alert('CSS code copied to clipboard!');
+    }
+
+    fetchSheetData();
+  </script>
+</body>
+</html>
