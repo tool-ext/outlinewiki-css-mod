@@ -37,7 +37,7 @@
 
 
 #sidebar > div:nth-of-type(3) > div:nth-of-type(3) > div > div > div:nth-of-type(1) > div:nth-of-type(3) > div > div > span > span {
-	background: red !important;
+	xbackground: red !important;
 }
 
 /* Mobile view */
