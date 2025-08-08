@@ -29,6 +29,8 @@
 
 
 
+
+
 /* Boyx - another backlink header in body */
 #root > div > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(4) > div > div:nth-of-type(1) {
 	background-color: var(--bgcolor-main) !important;
@@ -328,7 +330,7 @@ html > body > div:nth-of-type(1) > div > div > div:nth-of-type(2) > div > div:nt
 
 
 #root > div > div > div + div > div > div > div > div:nth-of-type(1) > div a {
-	color: var(--toc-link-color);
+	xcolor: var(--toc-link-color);
 }
 
 #root > div > div > div + div > div > div > div > div:nth-of-type(1) > div {
@@ -388,8 +390,14 @@ HEADER for COLLECTION LIST ...
 
 ----------------------
 */
-#root > div > div > div > div > div > div > div > label > div { border-radius: var(--search-input-radius); } /* GLOBAL - Search Radius */
+#root > div > div > div > div > div > div > div > label > div { 
+	border-radius: var(--search-input-radius); 
+} /* GLOBAL - Search Radius */
 
+#root > div > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(1) {
+	background: var(--bgcolor-sidebar) !important;
+	box-shadow: var(--header-border) !important;
+} 
 
 /* 
 ----------------------
@@ -635,9 +643,14 @@ body {
     background: var(--bgcolor-sidebar) !important;
     /* xborder-right removed as it appears unused */
     xborder-right: 1px solid red;
-    box-shadow: inset -1px 0 0 0 var(--border-color) !important;
+    box-shadow: var(--sidebar-border);
     
 }
+
+#sidebar > div:nth-of-type(3) > div:nth-of-type(3) > div button:hover {
+	background: var(--sidebar-button-hover) !important;
+}
+
 #root > div > div > span > div button:hover {
 	xbackground: red !important;
 }
