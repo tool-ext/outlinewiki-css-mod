@@ -32,7 +32,7 @@ body[style*="background: rgb(0, 0, 0)"]
   --content-header-color: #ffffff; /* Content header color */
   --bgcolor-main: #181818; /* Main background color */
   --bgcolor-sidebar: #272727; /* Sidebar background color */
-  --active-page-sidebar: var(--bgcolor-main); /* Active sidebar page color */
+  --active-page-sidebar: #3d3d3d; /* Active sidebar page color */
   --border-color: #363636; /* Border color */
   --content-link-color: #f6821f; /* Content link color */
   --toc-link-color: #b3b3b3;
