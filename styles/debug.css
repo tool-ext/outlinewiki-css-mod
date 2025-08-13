@@ -1,0 +1,43 @@
+:root {
+    --toc-font-size: 12px;
+    --toc-left-padding: 15px; /* If above is active, add ~15px left padding */
+    --search-input-radius: 4px;
+    --sidebar-invite: none; /* Hides invite link in sidebar */
+    --font-global: Inter, -apple-system, BlinkMacSystemFont,Helvetica Neue, sans-serif; /* IDeas - IBM Plex Sans */
+    --content-h1-size: .90em;
+    --content-h1-margin-top: 1vh;
+    --content-h1-margin-bottom: 0.5em;
+    --content-header-color: red; /* Content header color */
+    --bgcolor-main: #ffffff; /* Main background color */
+    --bgcolor-sidebar: #f6f6f6; /* Sidebar background color */
+    --active-page-sidebar: #e4e4e4; /* Active sidebar page color */
+    --border-color: #e0e0e0; /* Border color */
+    --content-link-color: #1567ed; /* Content link color */
+    --toc-link-color: #5c5c5c;
+    --toc-left-line: 1px solid; /* If want left ver line the length of TOC */
+    --bgcolor-popups: yellow;
+    --codeblock-bg: blue;
+    --codeblock-bg-gutter: yellow;
+    --sidebar-link-color: green;
+    --table-th-color: purple;
+    --sidebar-button-hover: blue;
+    --sidebar-border: inset -1px 0 0 0 var(--border-color) !important;
+    --header-border: red;
+  }
+  
+  body[style*="background: rgb(17, 19, 25)"],
+  body[style*="background: rgb(0, 0, 0)"]
+  {
+    --content-header-color: red; /* Content header color */
+    --bgcolor-main: #1e1e1e; /* Main background color */
+    --bgcolor-sidebar: #262626; /* Sidebar background color */
+    --active-page-sidebar: #363636; /* Active sidebar page color */
+    --border-color: #363636; /* Border color */
+    --content-link-color: #5a95f3; /* Content link color */
+    --toc-link-color: #b3b3b3;
+    --bgcolor-popups: #000;
+    --codeblock-bg: #b3b3b3;
+    --codeblock-bg-gutter: #083642;
+    --sidebar-link-color: #b3b3b3;
+    --sidebar-border: inset -1px 0 0 0 var(--border-color) !important;
+  }

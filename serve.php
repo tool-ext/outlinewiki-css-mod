@@ -34,7 +34,7 @@ if (empty($style) || !preg_match('/^[a-zA-Z0-9_-]+\.css$/', $style)) {
 
 // Define the order of CSS files to load
 $css_files = [
-    '/styles/cloudflare.css', // Load debug/base styles first
+    '/styles/debug.css', // Load debug/base styles first
     $style         // Then load the requested style
 ];
 
