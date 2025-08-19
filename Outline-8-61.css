@@ -15,8 +15,8 @@ These all likely break when new app version is upated so I put them all together
 #root > div > div > div > div:nth-of-type(2) > div > div:nth-of-type(2) > div > div > div:nth-of-type(4),
 #root > div > div > div > div:nth-of-type(2) > div > div:nth-of-type(2) > div > div > div:nth-of-type(4) > div:first-of-type
 {
-	background: transparent !important;
-    background-color: transparent !important;
+	background: var(--bgcolor-main) !important;
+
 }
 
 
@@ -171,13 +171,10 @@ BODY > TABLE OF CONTENTS
 	xborder-left: 1px solid var(--border-color);
 }
 #root > div > div > div > div:nth-of-type(2) > div > div:first-of-type > div:nth-of-type(2) > div:nth-of-type(2) > div a {
-	xcolor: #8b8b8b;
-	font-size: 80%;
-    xcolor: var(--toc-link-color);
+
+    
 }
-#root > div > div > div > div:nth-of-type(2) > div > div:first-of-type > div:nth-of-type(2) > div:nth-of-type(2) > div a:hover {
-	xcolor: #fff !important;
-}	
+
 
 /* Hide the CONTENTS header on TOC */
 #root > div > div > div > div:nth-of-type(2) > div > div:first-of-type > div:nth-of-type(2) > div:nth-of-type(2) > div h3 {
@@ -194,12 +191,13 @@ BODY > TABLE OF CONTENTS
 /* Compresses spacing on TOC a bit */
 #root > div > div > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) ol li {
 	padding-top: 0px;
-	padding-bottom: 3px;
-	margin-bottom: 1px;	
+	padding-bottom: 1px;
+	margin-bottom: 4px;	
 }
 #root > div > div > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) ol li a {
 	font-size: var(--toc-font-size) !important;
-
+	color: var(--toc-link-color);
+	font-size: 80% !important;
 }
 
 
@@ -382,6 +380,12 @@ body,
 
 
 
+html > body > div:nth-of-type(1) > div > div > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1)
+{
+	border-bottom: .5px solid var(--border-color) !important;
+	margin-top: 4vh !important; /* Slightly change default heigt from top */
+}
+
 
 
 #root > div > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > span {
@@ -396,6 +400,13 @@ html > body > div:nth-of-type(1) > div > div > div:nth-of-type(2) > div > div:nt
 { 
 	background: var(--bgcolor-main) !important;
 }
+
+
+#root .ProseMirror {
+	color: #c2c2c2 !important;
+}
+
+
 
 
 /*
@@ -487,11 +498,6 @@ Tried setting to a color but it changed the scrollbar as well, oddly ..
 }
 
 
-
-
-
-
-
 /* 
 ----------------------
 BODY > HEADINGS
@@ -509,16 +515,22 @@ BODY > HEADINGS
 	border: 1px solid red !important;
 }
 
-
 /*
 - This works but can't get main title to works
 - Also odd that main title is NOT h1
 */
-#root .ProseMirror h2,
-#root .ProseMirror h3,
+
+#root .ProseMirror h2 {
+	margin-top: 40px !important;
+	font-size: 28px !important;
+	xborder-bottom: .2px solid rgb(194, 194, 194) !important;
+}
+#root .ProseMirror h3 {
+	margin-top: 35px !important;
+}
 #root .ProseMirror h4,
 #root .ProseMirror h5 {
-	color: var(--content-header-color) !important;
+	margin-top: 30px !important;
 }
 
 
