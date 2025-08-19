@@ -351,7 +351,7 @@ FONT
 #root .ProseMirror
 { 
 	font-family: var(--font-global); 
-    font-family: 'Courier New', Courier, monospace !important; 
+    xfont-family: 'Courier New', Courier, monospace !important; 
 }
 
 
@@ -379,6 +379,9 @@ body,
 #root > div > div > div > div:before {
 	background: var(--bgcolor-main) !important;
 }
+
+
+
 
 
 #root > div > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > span {
@@ -498,7 +501,12 @@ BODY > HEADINGS
 /* Targets main page h1 */
 #root > div > div > div > div > div > div > div > div div span[contenteditable="true"] {
 	background: var(--bgcolor-main) !important;	
-	font-size: 1.05em;
+	font-size: .95em;
+}
+.bZpaim {
+	display: none !important;
+	margin: -12px 0px 1em !important; /* Minimize border */
+	border: 1px solid red !important;
 }
 
 

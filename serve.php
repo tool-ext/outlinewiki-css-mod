@@ -22,8 +22,9 @@ header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
 header('Pragma: no-cache');
 header('Expires: 0');
 
-// Get the requested style file from URL parameter
+// Get the requested style files from URL parameters
 $style = isset($_GET['style']) ? $_GET['style'] : '';
+$vars = isset($_GET['vars']) ? $_GET['vars'] : '';
 
 // Security: Make sure we only serve .css files and prevent directory traversal
 if (empty($style) || !preg_match('/^[a-zA-Z0-9_-]+\.css$/', $style)) {
@@ -32,11 +33,30 @@ if (empty($style) || !preg_match('/^[a-zA-Z0-9_-]+\.css$/', $style)) {
     exit;
 }
 
+// Validate vars parameter if provided
+if (!empty($vars) && !preg_match('/^[a-zA-Z0-9_-]+\.css$/', $vars)) {
+    http_response_code(400);
+    echo "/* Invalid vars CSS file requested */";
+    exit;
+}
+
 // Define the order of CSS files to load
-$css_files = [
-    '/styles/debug.css', // Load debug/base styles first
-    $style         // Then load the requested style
-];
+$css_files = [];
+
+// Add the main style file (assume it's in root directory)
+$css_files[] = $style;
+
+// Add vars file if provided, otherwise default to cloudflare.css
+if (!empty($vars)) {
+    // Check if file exists in styles directory first, then root
+    if (file_exists(__DIR__ . '/styles/' . $vars)) {
+        $css_files[] = 'styles/' . $vars;
+    } else {
+        $css_files[] = $vars;
+    }
+} else {
+    $css_files[] = 'styles/cloudflare.css'; // Default fallback
+}
 
 // Initialize combined CSS content
 $combined_css = '';
