@@ -23,7 +23,7 @@
   --table-th-color: #000;
   --sidebar-button-hover: transparent;
   --sidebar-border: inset -1px 0 0 0 var(--border-color) !important;
-  --header-border: inset 0 -1px 0 0 var(--border-color) !important;;
+  --header-border: inset 0 -1px 0 0 var(--border-color) !important;
 }
 
 body[style*="background: rgb(17, 19, 25)"],

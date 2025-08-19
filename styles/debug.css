@@ -23,6 +23,7 @@
     --sidebar-button-hover: blue;
     --sidebar-border: inset -1px 0 0 0 var(--border-color) !important;
     --header-border: red;
+    --header-border: inset 0 -1px 0 0 var(--border-color) !important;
   }
   
   body[style*="background: rgb(17, 19, 25)"],
@@ -40,4 +41,5 @@
     --codeblock-bg-gutter: #083642;
     --sidebar-link-color: #b3b3b3;
     --sidebar-border: inset -1px 0 0 0 var(--border-color) !important;
+    --header-border: inset 0 -1px 0 0 var(--border-color) !important;
   }
