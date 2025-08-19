@@ -279,12 +279,13 @@ body {
 
 
 /* Clear background on annoying popup things */
-
-#sidebar > div:nth-of-type(3) > div:nth-of-type(3) span {
+#sidebar > div:nth-of-type(3) > div:nth-of-type(3) span,
+#sidebar > div:nth-of-type(3) > div:first-of-type > div > div span
+{
 	background: transparent !important;
 }
 
-#sidebar > div:nth-of-type(3) > div:nth-of-type(3) > div button:hover {
+#sidebar div button:hover {
 	background: var(--sidebar-button-hover) !important;
 }
 
