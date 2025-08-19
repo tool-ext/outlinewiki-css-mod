@@ -1,23 +1,74 @@
+/*
+ANSII REGULAR ...
+https://patorjk.com/software/taag/
 
+*/
 
 /* 
 
 These all likely break when new app version is upated so I put them all together 
 */
 
+#root > div > div > div,
 
 /* Home List */
 #root > div > div > div > div:nth-of-type(2)  > div > div:nth-of-type(2) > div > div:nth-of-type(5),
 #root > div > div > div > div:nth-of-type(2) > div > div:nth-of-type(2) > div > div:nth-of-type(5) > div:first-of-type,
+
 /* Draft list pages */
 #root > div > div > div > div:nth-of-type(2) > div > div:nth-of-type(2) > div > div:first-of-type,
+
 /* Document list pages */
 #root > div > div > div > div:nth-of-type(2) > div > div:nth-of-type(2) > div > div > div:nth-of-type(4),
-#root > div > div > div > div:nth-of-type(2) > div > div:nth-of-type(2) > div > div > div:nth-of-type(4) > div:first-of-type
+#root > div > div > div > div:nth-of-type(2) > div > div:nth-of-type(2) > div > div > div:nth-of-type(4) > div:first-of-type,
+
+/* Backlinks footer */
+#root > div > div > div > div:nth-of-type(2) > div > div:first-of-type > div:nth-of-type(2) > div:first-of-type > div:nth-of-type(2) > div:nth-of-type(5) > div > div:first-of-type,
+
+/* Documents list on a parent page */
+html > body > div:nth-of-type(1) > div > div > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(2) > div > div > div:nth-of-type(5) > div > span > div:nth-of-type(1),
+html > body > div:nth-of-type(1) > div > div > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(2) > div > div > div:nth-of-type(5) > div > div:nth-of-type(1),
+
+/* Documents list on a parent page */
+html > body > div:nth-of-type(1) > div > div > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(1) > div > label > div,
+
+
+/* Search page header - also require override  */
+html > body > div:nth-of-type(1) > div > div > div > div:nth-of-type(2) > div > div:nth-of-type(1),
+
+
+/* ADMIN AREA - This little "rowgroup" makes it easier  */
+div[role="rowgroup"]
+
 {
 	background: var(--bgcolor-main) !important;
-
 }
+
+
+
+/*
+
+IMPORTANT - but probably could also use --bgcolor-main instead of transparent 
+*/
+#root > div > div > div > div:nth-of-type(2) > div {
+	background: transparent !important;
+}
+
+
+
+/* 
+----------------------
+
+██████  ███████ ██      ███████ ████████ ███████ 
+██   ██ ██      ██      ██         ██    ██      
+██   ██ █████   ██      █████      ██    █████   
+██   ██ ██      ██      ██         ██    ██      
+██████  ███████ ███████ ███████    ██    ███████ 
+                                                 
+                                                                                    
+
+----------------------
+*/
 
 
 
@@ -49,63 +100,6 @@ html .cECGKY.dMflsA {
     background: var(--bgcolor-sidebar) !important;
 	box-shadow: var(--header-border);
 }
-
-
-/*
- █████  ███████ ███████  ██████  ██████  ████████ ███████ ██████  
-██   ██ ██      ██      ██    ██ ██   ██    ██    ██      ██   ██ 
-███████ ███████ ███████ ██    ██ ██████     ██    █████   ██   ██ 
-██   ██      ██      ██ ██    ██ ██   ██    ██    ██      ██   ██ 
-██   ██ ███████ ███████  ██████  ██   ██    ██    ███████ ██████  
-                                                                                                                         
-
-
-HEADER for COLLECTION LIST ... 
-
-
-*/
-#root > div > div > div + div > div > div + div > div > div > div + div > div:nth-of-type(1) {
-	background: transparent !important;
-}
-
-
-
-/*
-
-Added quickly for latest version ... 
-*/
-#root > div > div > div > div:nth-of-type(2) > div {
-	background: transparent !important;
-}
-
-#root > div > div > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(5) > div > span > div:nth-of-type(1)
-{
-	background: transparent !important;
-}
-
-
-
-/*
-
-Hide the header hint helpers ... nice idea but just makes editor look busy
-*/
-#root .ProseMirror[contenteditable="true"]:focus-within h1:not(.placeholder)::before, 
-#root .ProseMirror-focused h1:not(.placeholder)::before, 
-#root .ProseMirror[contenteditable="true"]:focus-within h2:not(.placeholder)::before, 
-#root .ProseMirror-focused h2:not(.placeholder)::before, 
-#root .ProseMirror[contenteditable="true"]:focus-within h3:not(.placeholder)::before, 
-#root .ProseMirror-focused h3:not(.placeholder)::before, 
-#root .ProseMirror[contenteditable="true"]:focus-within h4:not(.placeholder)::before, 
-#root .ProseMirror-focused h4:not(.placeholder)::before, 
-#root .ProseMirror[contenteditable="true"]:focus-within h5:not(.placeholder)::before, 
-#root .ProseMirror-focused h5:not(.placeholder)::before, 
-#root .ProseMirror[contenteditable="true"]:focus-within h6:not(.placeholder)::before, 
-#root .ProseMirror-focused h6:not(.placeholder)::before {
-    opacity: 0;
-}
-
-
-
 
 
 
@@ -151,30 +145,15 @@ CONTENT WIDTH ALTERATION
                                                                
                                                                
 
-BODY > TABLE OF CONTENTS
+BODY > TABLE OF CONTENTS - TOC
 ----------------------
 */
 
-
-/* BODY - TOC */
-
-
-/*
-
-#root > div > div > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > div
-
-
-*/
 #root > div > div > div > div:nth-of-type(2) > div > div:first-of-type > div:nth-of-type(2) > div:nth-of-type(2) > div {
     background-color: transparent !important; /* Used GREEN here for testing */	
     margin-top: var(--toc-margin-top) !important;
 	xborder-left: 1px solid var(--border-color);
 }
-#root > div > div > div > div:nth-of-type(2) > div > div:first-of-type > div:nth-of-type(2) > div:nth-of-type(2) > div a {
-
-    
-}
-
 
 /* Hide the CONTENTS header on TOC */
 #root > div > div > div > div:nth-of-type(2) > div > div:first-of-type > div:nth-of-type(2) > div:nth-of-type(2) > div h3 {
@@ -200,7 +179,25 @@ BODY > TABLE OF CONTENTS
 	font-size: 80% !important;
 }
 
+/* 
+----------------------
 
+███████  ██████ ██████   ██████  ██      ██      ██████   █████  ██████  
+██      ██      ██   ██ ██    ██ ██      ██      ██   ██ ██   ██ ██   ██ 
+███████ ██      ██████  ██    ██ ██      ██      ██████  ███████ ██████  
+     ██ ██      ██   ██ ██    ██ ██      ██      ██   ██ ██   ██ ██   ██ 
+███████  ██████ ██   ██  ██████  ███████ ███████ ██████  ██   ██ ██   ██ 
+                                                                         
+                                                                                                                                                        
+----------------------
+
+}
+*/
+
+
+body {
+	scrollbar-color: #363636 transparent;
+}
 
 
 
@@ -212,8 +209,7 @@ BODY > TABLE OF CONTENTS
 ██      █████   █████      ██        ███████ ██ ██   ██ █████   ██████  ███████ ██████  
 ██      ██      ██         ██             ██ ██ ██   ██ ██      ██   ██ ██   ██ ██   ██ 
 ███████ ███████ ██         ██        ███████ ██ ██████  ███████ ██████  ██   ██ ██   ██ 
-                                                                                        
-                                                                                        
+                                                                                                                                                             
 
 ----------------------
 
@@ -260,8 +256,6 @@ body {
     xcolor: rgb(230, 230, 230);
     background: var(--active-page-sidebar) !important;
 }
-
-
 
 
 /* Highlight Color on Hover ... */
@@ -311,27 +305,24 @@ body {
 }
 
 
+
 /* 
 ----------------------
-BODY > CODE BLOCKS
-
- ██████  ██████  ██████  ███████     ██████  ██       ██████   ██████ ██   ██ ███████ 
-██      ██    ██ ██   ██ ██          ██   ██ ██      ██    ██ ██      ██  ██  ██      
-██      ██    ██ ██   ██ █████       ██████  ██      ██    ██ ██      █████   ███████ 
-██      ██    ██ ██   ██ ██          ██   ██ ██      ██    ██ ██      ██  ██       ██ 
- ██████  ██████  ██████  ███████     ██████  ███████  ██████   ██████ ██   ██ ███████ 
-                                                                                      
-                                                                                      
-
+███████ ██ ██████  ███████ ██████   █████  ██████      ██       ██████  ██    ██ ████████ ████████  ██████  ███    ██ 
+██      ██ ██   ██ ██      ██   ██ ██   ██ ██   ██      ██      ██   ██ ██    ██    ██       ██    ██    ██ ████   ██ 
+███████ ██ ██   ██ █████   ██████  ███████ ██████        ██     ██████  ██    ██    ██       ██    ██    ██ ██ ██  ██ 
+     ██ ██ ██   ██ ██      ██   ██ ██   ██ ██   ██      ██      ██   ██ ██    ██    ██       ██    ██    ██ ██  ██ ██ 
+███████ ██ ██████  ███████ ██████  ██   ██ ██   ██     ██       ██████   ██████     ██       ██     ██████  ██   ████ 
+                                                                                                                                               
 ----------------------
 */
-#root .ProseMirror pre {
-    background: var(--codeblock-bg);
-    font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace;
+
+
+
+button[aria-expanded="true"] {
+	background: var(--bgcolor-main) !important;
 }
-#root .code-block.with-line-numbers::after {
-	background: var(--codeblock-bg-gutter);
-}
+
 
 
 /* 
@@ -369,6 +360,8 @@ FONT
 
 ----------------------
 */
+
+
 /* 
 Main body 
 */
@@ -378,23 +371,6 @@ body,
 	background: var(--bgcolor-main) !important;
 }
 
-
-
-html > body > div:nth-of-type(1) > div > div > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1)
-{
-	border-bottom: .5px solid var(--border-color) !important;
-	margin-top: 4vh !important; /* Slightly change default heigt from top */
-}
-
-
-
-#root > div > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > span {
-	font-size: var(--content-h1-size) !important;
-} 
-#root > div > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) {
-	margin-top: var(--content-h1-margin-top) !important;
-	margin-bottom: var(--content-h1-margin-bottom) !important;
-} 
 html > body > div:nth-of-type(1) > div > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(5) > div > div:nth-of-type(1),
 #root > div > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(5) > div > div:nth-of-type(1) > nav
 { 
@@ -409,6 +385,29 @@ html > body > div:nth-of-type(1) > div > div > div:nth-of-type(2) > div > div:nt
 
 
 
+/* 
+----------------------
+
+██████   ██████   ██████     ██      ██ ███████ ████████     ██   ██ ██  ██████  ██   ██ ███████ ██████  
+██   ██ ██    ██ ██          ██      ██ ██         ██        ██   ██ ██ ██       ██   ██ ██      ██   ██ 
+██   ██ ██    ██ ██          ██      ██ ███████    ██        ███████ ██ ██   ███ ███████ █████   ██████  
+██   ██ ██    ██ ██          ██      ██      ██    ██        ██   ██ ██ ██    ██ ██   ██ ██      ██   ██ 
+██████   ██████   ██████     ███████ ██ ███████    ██        ██   ██ ██  ██████  ██   ██ ███████ ██   ██ 
+                                                                                                         
+                                                                                                         
+
+----------------------
+*/
+
+
+
+html > body > div:nth-of-type(1) > div > div > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(2) > div > div > div:nth-of-type(4)
+ {
+    min-height: calc(0px + 5vh);
+}
+
+
+
 /*
 
 REMOVED POPUP SECTION 
@@ -418,9 +417,23 @@ Popup menus
 - newdoc
 - page settings
 - code settings
+
+███    ███  ██████  ██████   █████  ██      ███████ 
+████  ████ ██    ██ ██   ██ ██   ██ ██      ██      
+██ ████ ██ ██    ██ ██   ██ ███████ ██      ███████ 
+██  ██  ██ ██    ██ ██   ██ ██   ██ ██           ██ 
+██      ██  ██████  ██████  ██   ██ ███████ ███████ 
+                                                    
+                                                    
 */
 
-/*
+
+div[role="menu"] {
+	background: var(--bgcolor-main) !important;
+	xborder: 1px solid red !important;
+}
+
+
 div[role="menu"] > div {
 	background-color: var(--bgcolor-popups) !important;
 	filter: brightness(80%); 
@@ -437,7 +450,212 @@ div[role="dialog"] > div div
     xfilter: brightness(80%); 
 }
 
+
+
+
+
+/* 
+----------------------
+BODY > HEADINGS
+██   ██ ███████  █████  ██████  ██ ███    ██  ██████      ██   ██  ██████  ██    ██ ███████ ██████  
+██   ██ ██      ██   ██ ██   ██ ██ ████   ██ ██           ██   ██ ██    ██ ██    ██ ██      ██   ██ 
+███████ █████   ███████ ██   ██ ██ ██ ██  ██ ██   ███     ███████ ██    ██ ██    ██ █████   ██████  
+██   ██ ██      ██   ██ ██   ██ ██ ██  ██ ██ ██    ██     ██   ██ ██    ██  ██  ██  ██      ██   ██ 
+██   ██ ███████ ██   ██ ██████  ██ ██   ████  ██████      ██   ██  ██████    ████   ███████ ██   ██ 
+                                                                                                    
+                                                                                                    
+            
+            
+----------------------
 */
+
+
+/*
+
+Hide the header hint helpers ... nice idea but just makes editor look busy
+*/
+#root .ProseMirror[contenteditable="true"]:focus-within h1:not(.placeholder)::before, 
+#root .ProseMirror-focused h1:not(.placeholder)::before, 
+#root .ProseMirror[contenteditable="true"]:focus-within h2:not(.placeholder)::before, 
+#root .ProseMirror-focused h2:not(.placeholder)::before, 
+#root .ProseMirror[contenteditable="true"]:focus-within h3:not(.placeholder)::before, 
+#root .ProseMirror-focused h3:not(.placeholder)::before, 
+#root .ProseMirror[contenteditable="true"]:focus-within h4:not(.placeholder)::before, 
+#root .ProseMirror-focused h4:not(.placeholder)::before, 
+#root .ProseMirror[contenteditable="true"]:focus-within h5:not(.placeholder)::before, 
+#root .ProseMirror-focused h5:not(.placeholder)::before, 
+#root .ProseMirror[contenteditable="true"]:focus-within h6:not(.placeholder)::before, 
+#root .ProseMirror-focused h6:not(.placeholder)::before {
+    opacity: 0;
+}
+
+
+/* 
+----------------------
+BODY > HEADINGS
+██   ██  ██ 
+██   ██ ███ 
+███████  ██ 
+██   ██  ██ 
+██   ██  ██ 
+            
+            
+----------------------
+*/
+
+/* Targets main page h1 */
+#root > div > div > div > div > div > div > div > div div span[contenteditable="true"] {
+	background: var(--bgcolor-main) !important;	
+	font-size: .95em;
+}
+
+#root > div > div > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(2) [tabindex="-1"] {
+	xbackground: green !important;
+	xz-index: 1000 !important;
+	border-bottom: .5px solid var(--border-color) !important;
+	margin-top: 4vh !important; /* Slightly change default heigt from top */
+}
+
+
+#root > div > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > span {
+	font-size: var(--content-h1-size) !important;
+} 
+#root > div > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) {
+	margin-top: var(--content-h1-margin-top) !important;
+	margin-bottom: var(--content-h1-margin-bottom) !important;
+} 
+
+
+
+
+/*
+
+INFO BAR BENEATH MAIN BODY h1 
+- but it's actually not an h1
+- Hides it by default but can show it on hover
+
+██   ██  ██     ██       ██ ███    ██ ███████  ██████  ██████   █████  ██████  
+██   ██ ███      ██      ██ ████   ██ ██      ██    ██ ██   ██ ██   ██ ██   ██ 
+███████  ██       ██     ██ ██ ██  ██ █████   ██    ██ ██████  ███████ ██████  
+██   ██  ██      ██      ██ ██  ██ ██ ██      ██    ██ ██   ██ ██   ██ ██   ██ 
+██   ██  ██     ██       ██ ██   ████ ██       ██████  ██████  ██   ██ ██   ██ 
+                                                                               
+                                                                               
+
+*/
+#root > div > div > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(2) > div > div > div:nth-of-type(2) {
+	xdisplay: none !important;
+	xborder: 1px solid red;
+	margin-bottom: 0px !important;
+	opacity: 0;
+}
+#root > div > div > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(2) > div > div > div:nth-of-type(2):hover {
+	opacity: 1;
+}
+
+
+
+
+
+/*
+██   ██ ██████  
+██   ██      ██ 
+███████  █████  
+██   ██ ██      
+██   ██ ███████ 
+                
+                
+- This works but can't get main title to works
+- Also odd that main title is NOT h1
+*/
+
+#root .ProseMirror h2 {
+	margin-top: 40px !important;
+	font-size: 28px !important;
+	xborder-bottom: .2px solid rgb(194, 194, 194) !important;
+	font-weight: 700;
+}
+
+/*
+██   ██ ██████  
+██   ██      ██ 
+███████  █████  
+██   ██      ██ 
+██   ██ ██████  
+                
+                
+*/
+
+#root .ProseMirror h3 {
+	margin-top: 35px !important;
+	font-weight: 700;
+}
+#root .ProseMirror h4,
+#root .ProseMirror h5 {
+	margin-top: 30px !important;
+	font-weight: 600;
+}
+
+
+/* 
+----------------------
+BODY > LINKS
+██████   ██████  ██████  ██    ██     ██       ██      ██ ███    ██ ██   ██ ███████ 
+██   ██ ██    ██ ██   ██  ██  ██       ██      ██      ██ ████   ██ ██  ██  ██      
+██████  ██    ██ ██   ██   ████         ██     ██      ██ ██ ██  ██ █████   ███████ 
+██   ██ ██    ██ ██   ██    ██         ██      ██      ██ ██  ██ ██ ██  ██       ██ 
+██████   ██████  ██████     ██        ██       ███████ ██ ██   ████ ██   ██ ███████ 
+                                                                                    
+                                                                                    
+----------------------
+*/
+.ProseMirror p a {
+	color: var(--content-link-color) !important;
+	xtext-underline-offset: auto !important; /* Removes weird Outline offset */
+	font-weight: 500 !important; /* 500 is default */
+	
+}	
+.ProseMirror p a, .ProseMirror p a:hover {
+	text-decoration-color: var(--content-link-color);
+	text-decoration-thickness: 2px;
+}
+
+/* Internal vs EXTENRAL pages */
+#root .ProseMirror p a {
+	xbackground: #edf2f7 !important;
+	xbackground-color: red !important;
+}
+/* External links variation */
+#root .ProseMirror p a[href^="http"] { position: relative; }
+#root .ProseMirror p a[href^="http"]::after {
+    content: '↗'; /* Use an external link icon of your choice */
+    margin-left: 0.3em; /* Add spacing between the link text and the icon */
+    font-size: 0.9em; /* Adjust size to your preference */
+    vertical-align: middle; /* Align the icon properly with the text */
+    display: inline-block;
+    transform: translateY(1px); /* Optional: fine-tune alignment */
+}
+
+
+
+
+/* 
+----------------------
+BODY > LI BULLETS
+██████   ██████  ██████  ██    ██     ██       ██      ██ 
+██   ██ ██    ██ ██   ██  ██  ██       ██      ██      ██ 
+██████  ██    ██ ██   ██   ████         ██     ██      ██ 
+██   ██ ██    ██ ██   ██    ██         ██      ██      ██ 
+██████   ██████  ██████     ██        ██       ███████ ██ 
+                                                          
+                                                          
+----------------------
+*/
+.ProseMirror li::marker {
+  color: orange;
+  xfont-size: 1em; /* Changing size of li bullets */
+}
+
 
 
 
@@ -460,6 +678,9 @@ div[role="dialog"] > div div
 }
 
 
+.ProseMirror table th {
+    background: var(--bgcolor-sidebar) !important;
+}
 
 /** BODY - Table */
 #root > div > div > div > div > div th,
@@ -472,149 +693,32 @@ div[role="dialog"] > div div
 	font-weight: 800 !important;
 }
 
-/* BODY - Docs List - HEADER 
-Tried setting to a color but it changed the scrollbar as well, oddly .. 
-*/
-#root > div > div > div:nth-of-type(2) > div > div:nth-of-type(2) > div > div + div > div:nth-of-type(1) {
-	background: transparent !important;
-}
 
-/* BODY - Docs List - BODY */
-#root > div > div > div:nth-of-type(2) > div > div:nth-of-type(2) > div > div + div {
-	background: transparent !important;
-}
 
-/* BODY - Docs List - HEADER and OTHER SPOTS */
-#root > div > div > div + div > div > div + div > div > div {
-	background: transparent !important;
-}
-#root > div > div > div + div > div > div.sc-1fsvudc-0.sc-fuzaxe-2.jvEVwV.fnaOAQ {
-	background-color: transparent !important;
-}
-
-/* Backlinks docs - not sure if this is dup or not - may be defined somewhere else ...  */ 
-#root > div > div > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(5) > div > div:nth-of-type(1) {
-	background: transparent !important;
-}
 
 
 /* 
 ----------------------
-BODY > HEADINGS
+BODY > CODE BLOCKS
+
+ ██████  ██████  ██████  ███████     ██████  ██       ██████   ██████ ██   ██ ███████ 
+██      ██    ██ ██   ██ ██          ██   ██ ██      ██    ██ ██      ██  ██  ██      
+██      ██    ██ ██   ██ █████       ██████  ██      ██    ██ ██      █████   ███████ 
+██      ██    ██ ██   ██ ██          ██   ██ ██      ██    ██ ██      ██  ██       ██ 
+ ██████  ██████  ██████  ███████     ██████  ███████  ██████   ██████ ██   ██ ███████ 
+                                                                                      
+                                                                                      
+
 ----------------------
 */
-
-/* Targets main page h1 */
-#root > div > div > div > div > div > div > div > div div span[contenteditable="true"] {
-	background: var(--bgcolor-main) !important;	
-	font-size: .95em;
+#root .ProseMirror pre {
+    background: var(--codeblock-bg);
+    font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace;
 }
-.bZpaim {
-	display: none !important;
-	margin: -12px 0px 1em !important; /* Minimize border */
-	border: 1px solid red !important;
-}
-
-/*
-- This works but can't get main title to works
-- Also odd that main title is NOT h1
-*/
-
-#root .ProseMirror h2 {
-	margin-top: 40px !important;
-	font-size: 28px !important;
-	xborder-bottom: .2px solid rgb(194, 194, 194) !important;
-}
-#root .ProseMirror h3 {
-	margin-top: 35px !important;
-}
-#root .ProseMirror h4,
-#root .ProseMirror h5 {
-	margin-top: 30px !important;
+#root .code-block.with-line-numbers::after {
+	background: var(--codeblock-bg-gutter);
 }
 
 
-/* 
-----------------------
-BODY > LINKS
-----------------------
-*/
-.ProseMirror p a {
-	color: var(--content-link-color) !important;
-	xtext-underline-offset: auto !important; /* Removes weird Outline offset */
-	font-weight: 500 !important; /* 500 is default */
+
 	
-}	
-.ProseMirror p a, .ProseMirror p a:hover {
-	text-decoration-color: var(--content-link-color);
-	text-decoration-thickness: 2px;
-}
-.ProseMirror table th {
-    background: var(--bgcolor-sidebar) !important;
-}
-
-
-/* Internal vs EXTENRAL pages */
-#root .ProseMirror p a {
-	xbackground: #edf2f7 !important;
-	xbackground-color: red !important;
-}
-/* External links variation */
-#root .ProseMirror p a[href^="http"] { position: relative; }
-#root .ProseMirror p a[href^="http"]::after {
-    content: '↗'; /* Use an external link icon of your choice */
-    margin-left: 0.3em; /* Add spacing between the link text and the icon */
-    font-size: 0.9em; /* Adjust size to your preference */
-    vertical-align: middle; /* Align the icon properly with the text */
-    display: inline-block;
-    transform: translateY(1px); /* Optional: fine-tune alignment */
-}
-
-
-
-
-
-
-/* 
-----------------------
-BODY > LI BULLETS
-----------------------
-*/
-.ProseMirror li::marker {
-  color: orange;
-  xfont-size: 1em; /* Changing size of li bullets */
-}
-
-
-/*
-
-
-██████   █████   ██████ ██   ██ ██      ██ ███    ██ ██   ██ ███████     ███████  ██████   ██████  ████████ ███████ ██████  
-██   ██ ██   ██ ██      ██  ██  ██      ██ ████   ██ ██  ██  ██          ██      ██    ██ ██    ██    ██    ██      ██   ██ 
-██████  ███████ ██      █████   ██      ██ ██ ██  ██ █████   ███████     █████   ██    ██ ██    ██    ██    █████   ██████  
-██   ██ ██   ██ ██      ██  ██  ██      ██ ██  ██ ██ ██  ██       ██     ██      ██    ██ ██    ██    ██    ██      ██   ██ 
-██████  ██   ██  ██████ ██   ██ ███████ ██ ██   ████ ██   ██ ███████     ██       ██████   ██████     ██    ███████ ██   ██ 
-                                                                                                                            
-                                                                                                                            
-
-
-Header for the footer area where backlinks are
-
-
-*/
-
-#root > div > div > div > div:nth-of-type(2)
-  > div > div:first-of-type > div:nth-of-type(2)
-  > div:first-of-type > div:nth-of-type(2)
-  > div:nth-of-type(5) > div > div:first-of-type
-{
-	background: transparent !important;
-	xborder: 1px solid red !important;
-}
-
-
-
-
-
-
-
