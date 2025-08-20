@@ -1,0 +1,53 @@
+:root {
+    --toc-font-size: 12px;
+    --toc-left-padding: 15px; /* If above is active, add ~15px left padding */
+    --search-input-radius: 4px;
+    --sidebar-invite: none; /* Hides invite link in sidebar */
+    --font-global: Inter, -apple-system, BlinkMacSystemFont,Helvetica Neue, sans-serif; /* IDeas - IBM Plex Sans */
+    --content-h1-size: .90em;
+    --content-h1-margin-top: 2.9vh;
+    --content-h1-margin-bottom: 0.5em;
+    --toc-margin-top: -5px;
+    --content-header-color: #000; /* Content header color */
+    --bgcolor-main: #ffffff; /* Main background color */
+    --bgcolor-sidebar: #f6f7f9; /* Sidebar background color */
+    --active-page-sidebar: #dee2e6; /* Active sidebar page color */
+    --border-color: #dee2e6; /* Border color */
+    --content-link-color: #1567ed; /* Content link color */
+    --toc-link-color: #1567ed;
+    --toc-left-line: 1px solid; /* If want left ver line the length of TOC */
+    --bgcolor-popups: #ffffff;
+    --codeblock-bg: #ffffff;
+    --codeblock-bg-gutter: #ddd;
+    --table-td-border: 1px solid #ddd;
+    --table-th-border: 1px solid #ddd;
+    --table-th-color: #000;
+    --sidebar-link-color: #000;
+    --sidebar-button-hover: transparent;
+    --sidebar-border: inset -1px 0 0 0 var(--border-color) !important;
+    --header-border: inset 0 -1px 0 0 var(--border-color) !important;;
+  }
+  
+  body[style*="background: rgb(17, 19, 25)"],
+  body[style*="background: rgb(0, 0, 0)"]
+  {
+    --content-header-color: #ffffff; /* Content header color */
+    --bgcolor-main: #242424; /* Main background color */
+    --bgcolor-sidebar: #1f1f1f; /* Sidebar background color */
+    --active-page-sidebar: #2e2e2e; /* Active sidebar page color */
+    --border-color: #2e2e2e; /* Border color */
+    --content-link-color: #f6821f; /* Content link color */
+    --toc-link-color: #8b8b8b;
+    --toc-left-line: var(--border-color); /* If want left ver line the length of TOC */
+    --bgcolor-popups: #181818;
+    --codeblock-bg: #313131;
+    --codeblock-bg-gutter: #313131;
+    --table-td-border: 1px solid #363636;
+    --table-th-border: 1px solid #363636;
+    --table-th-color: #ffffff;
+    --sidebar-link-color: #b3b3b3;
+    --sidebar-button-hover: transparent;
+    --sidebar-border: inset -1px 0 0 0 var(--border-color) !important;
+    --header-border: inset 0 -1px 0 0 var(--border-color) !important;;
+    --sidebar-button-hover: none;
+  }

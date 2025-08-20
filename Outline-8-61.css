@@ -712,6 +712,15 @@ BODY > LI BULLETS
 #root > div > div > div > div > div th,
 #root > div > div > div > div > div td {
 	background: transparent !important;
+	border-bottom: 1px solid  !important
+}
+
+#root > div > div > div > div > div th {
+	border: var(--table-th-border) !important;
+}
+
+#root > div > div > div > div > div td {
+	border:  var(--table-td-border) !important;
 }
 
 #root > div > div > div > div > div th {
