@@ -11,6 +11,9 @@ These all likely break when new app version is upated so I put them all together
 
 #root > div > div > div,
 
+/* SITE HEADER BAR ABOVE CONTENT - Again  */
+body > div:nth-child(1) > div > div > div > div:nth-child(2) > div > div:nth-child(1) > div:nth-child(1),
+
 /* Home List */
 #root > div > div > div > div:nth-of-type(2)  > div > div:nth-of-type(2) > div > div:nth-of-type(5),
 #root > div > div > div > div:nth-of-type(2) > div > div:nth-of-type(2) > div > div:nth-of-type(5) > div:first-of-type,
@@ -745,4 +748,3 @@ BODY > CODE BLOCKS
 
 
 
-	
