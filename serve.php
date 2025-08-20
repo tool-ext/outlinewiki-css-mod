@@ -43,10 +43,8 @@ if (!empty($vars) && !preg_match('/^[a-zA-Z0-9_-]+\.css$/', $vars)) {
 // Define the order of CSS files to load
 $css_files = [];
 
-// Add the main style file (assume it's in root directory)
-$css_files[] = $style;
-
-// Add vars file if provided, otherwise default to cloudflare.css
+// Add vars file first if provided, otherwise default to cloudflare.css
+// CSS variables need to be loaded before they're used
 if (!empty($vars)) {
     // Check if file exists in styles directory first, then root
     if (file_exists(__DIR__ . '/styles/' . $vars)) {
@@ -57,6 +55,9 @@ if (!empty($vars)) {
 } else {
     $css_files[] = 'styles/cloudflare.css'; // Default fallback
 }
+
+// Add the main style file after vars (assume it's in root directory)
+$css_files[] = $style;
 
 // Initialize combined CSS content
 $combined_css = '';
