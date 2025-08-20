@@ -37,13 +37,25 @@ html > body > div:nth-of-type(1) > div > div > div > div:nth-of-type(2) > div > 
 html > body > div:nth-of-type(1) > div > div > div > div:nth-of-type(2) > div > div:nth-of-type(1),
 
 
+/* SHARED VIEW - Header*/
+html > body > div:nth-of-type(1) > div > div:nth-of-type(1) > div > div:nth-of-type(3) > div > div > div:nth-of-type(1),
+/* SHARED VIEW - Background */
+html > body > div:nth-of-type(1) > div > div:nth-of-type(1) > div > div:nth-of-type(3) > div,
+/* SHARED VIEW - Doclist */
+html > body > div:nth-of-type(1) > div > div:nth-of-type(1) > div > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div > div > div:nth-of-type(3) > div > div,
+
+
+/* SHARED VIEW - Docslist header */
+body > div:nth-child(1) > div > div:nth-child(1) > div > div:nth-child(3) > div > div > div:nth-child(2) > div > div > div:nth-child(3) > div > div,
+
+/* SHARED VIEW - Input Field */
+#sidebar > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > label > div,
 /* ADMIN AREA - This little "rowgroup" makes it easier  */
 div[role="rowgroup"]
 
 {
 	background: var(--bgcolor-main) !important;
 }
-
 
 
 /*
@@ -365,8 +377,8 @@ FONT
 /* 
 Main body 
 */
+html,
 body,
-#root > div > div > div > div,
 #root > div > div > div > div:before {
 	background: var(--bgcolor-main) !important;
 }
@@ -381,6 +393,8 @@ html > body > div:nth-of-type(1) > div > div > div:nth-of-type(2) > div > div:nt
 #root .ProseMirror {
 	color: #c2c2c2 !important;
 }
+
+
 
 
 
@@ -450,7 +464,14 @@ div[role="dialog"] > div div
     xfilter: brightness(80%); 
 }
 
+/*
 
+FIXES WEIRD THING IN MODAL COLOR using BEFORE .. the top portion ... 
+
+*/
+html div:before {
+	background: var(--bgcolor-main) !important;
+}
 
 
 
@@ -570,7 +591,7 @@ INFO BAR BENEATH MAIN BODY h1
 */
 
 #root .ProseMirror h2 {
-	margin-top: 40px !important;
+	margin-top: 30px !important;
 	font-size: 28px !important;
 	xborder-bottom: .2px solid rgb(194, 194, 194) !important;
 	font-weight: 700;
@@ -612,12 +633,14 @@ BODY > LINKS
 .ProseMirror p a {
 	color: var(--content-link-color) !important;
 	xtext-underline-offset: auto !important; /* Removes weird Outline offset */
-	font-weight: 500 !important; /* 500 is default */
 	
 }	
-.ProseMirror p a, .ProseMirror p a:hover {
+.ProseMirror p a, 
+.ProseMirror p a:hover {
 	text-decoration-color: var(--content-link-color);
 	text-decoration-thickness: 2px;
+	font-weight: 500 !important; /* 500 is default */
+	color: var(--content-link-color) !important;
 }
 
 /* Internal vs EXTENRAL pages */
@@ -718,6 +741,7 @@ BODY > CODE BLOCKS
 #root .code-block.with-line-numbers::after {
 	background: var(--codeblock-bg-gutter);
 }
+
 
 
 
