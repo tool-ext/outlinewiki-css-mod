@@ -404,7 +404,7 @@ html > body > div:nth-of-type(1) > div > div > div:nth-of-type(2) > div > div:nt
 
 
 #root .ProseMirror {
-	color: #c2c2c2 !important;
+	xcolor: #c2c2c2 !important;
 }
 
 
@@ -605,9 +605,10 @@ INFO BAR BENEATH MAIN BODY h1
 
 #root .ProseMirror h2 {
 	margin-top: 30px !important;
-	font-size: 28px !important;
+	font-size: 26px !important;
 	xborder-bottom: .2px solid rgb(194, 194, 194) !important;
 	font-weight: 700;
+	xbackground: green;
 }
 
 /*
@@ -623,11 +624,14 @@ INFO BAR BENEATH MAIN BODY h1
 #root .ProseMirror h3 {
 	margin-top: 35px !important;
 	font-weight: 700;
+	font-size: 18px !important;
+	xbackground: red;
 }
 #root .ProseMirror h4,
 #root .ProseMirror h5 {
 	margin-top: 30px !important;
 	font-weight: 600;
+	font-size: 18px !important;
 }
 
 
