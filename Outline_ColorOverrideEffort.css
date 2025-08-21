@@ -1,0 +1,22 @@
+/*
+
+Fun method to try that ultimately didn't work. 
+
+*/
+
+
+*[style*="#08090c"],
+*[style*="rgb(8, 9, 12)"],
+*[style*="rgb(8,9,12)"] {
+   background: blue !important;
+ }
+
+*[style*="#111319"],
+*[style*="rgb(17, 19, 25)"],
+*[style*="rgb(17,19,25)"] {
+  background: red !important;
+}
+
+body #root *[style*="rgb(230, 230, 230)"] {
+  background: green !important;
+}

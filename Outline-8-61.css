@@ -523,6 +523,14 @@ Hide the header hint helpers ... nice idea but just makes editor look busy
     opacity: 0;
 }
 
+/*
+More popups that occur to left of headers
+This removes background color from them
+*/
+.heading-actions {
+	background: transparent !important;
+}
+
 
 /* 
 ----------------------
@@ -546,7 +554,7 @@ BODY > HEADINGS
 #root > div > div > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(2) [tabindex="-1"] {
 	xbackground: green !important;
 	xz-index: 1000 !important;
-	border-bottom: .5px solid var(--border-color) !important;
+	border-bottom: 2px solid var(--border-color) !important;
 	margin-top: 4vh !important; /* Slightly change default heigt from top */
 }
 
