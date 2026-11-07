@@ -1,0 +1,830 @@
+/* Start of styles/docmost.css */
+:root {
+    --toc-font-size: 12px;
+    --toc-left-padding: 15px; /* If above is active, add ~15px left padding */
+    --search-input-radius: 4px;
+    --sidebar-invite: none; /* Hides invite link in sidebar */
+    --font-global: Inter, -apple-system, BlinkMacSystemFont,Helvetica Neue, sans-serif; /* IDeas - IBM Plex Sans */
+    --content-h1-size: .90em;
+    --content-h1-margin-top: 2.9vh;
+    --content-h1-margin-bottom: 0.5em;
+    --toc-margin-top: -5px;
+    --content-header-color: #000; /* Content header color */
+    --bgcolor-main: #ffffff; /* Main background color */
+    --bgcolor-sidebar: #f6f7f9; /* Sidebar background color */
+    --active-page-sidebar: #dee2e6; /* Active sidebar page color */
+    --border-color: #dee2e6; /* Border color */
+    --content-link-color: #1567ed; /* Content link color */
+    --toc-link-color: #1567ed;
+    --toc-left-line: 1px solid; /* If want left ver line the length of TOC */
+    --bgcolor-popups: #ffffff;
+    --codeblock-bg: #ffffff;
+    --codeblock-bg-gutter: #ddd;
+    --table-td-border: 1px solid #ddd;
+    --table-th-border: 1px solid #ddd;
+    --table-th-color: #000;
+    --sidebar-link-color: #000;
+    --sidebar-button-hover: transparent;
+    --sidebar-border: inset -1px 0 0 0 var(--border-color) !important;
+    --header-border: inset 0 -1px 0 0 var(--border-color) !important;;
+  }
+  
+  body[style*="background: rgb(17, 19, 25)"],
+  body[style*="background: rgb(0, 0, 0)"]
+  {
+    --content-header-color: #ffffff; /* Content header color */
+    --bgcolor-main: #242424; /* Main background color */
+    --bgcolor-sidebar: #1f1f1f; /* Sidebar background color */
+    --active-page-sidebar: #2e2e2e; /* Active sidebar page color */
+    --border-color: #2e2e2e; /* Border color */
+    --content-link-color: #f6821f; /* Content link color */
+    --toc-link-color: #8b8b8b;
+    --toc-left-line: var(--border-color); /* If want left ver line the length of TOC */
+    --bgcolor-popups: #181818;
+    --codeblock-bg: #313131;
+    --codeblock-bg-gutter: #313131;
+    --table-td-border: 1px solid #363636;
+    --table-th-border: 1px solid #363636;
+    --table-th-color: #ffffff;
+    --sidebar-link-color: #b3b3b3;
+    --sidebar-button-hover: transparent;
+    --sidebar-border: inset -1px 0 0 0 var(--border-color) !important;
+    --header-border: inset 0 -1px 0 0 var(--border-color) !important;;
+    --sidebar-button-hover: none;
+  }
+  /* End of styles/docmost.css */
+  
+  /* Start of Outline-8-61.css */
+  /*
+  ANSII REGULAR ...
+  https://patorjk.com/software/taag/
+  
+  */
+  
+  /* 
+  
+  These all likely break when new app version is upated so I put them all together 
+  */
+  
+  #root > div > div > div,
+  
+  /* SITE HEADER BAR ABOVE CONTENT - Again  */
+  body > div:nth-child(1) > div > div > div > div:nth-child(2) > div > div:nth-child(1) > div:nth-child(1),
+  
+  /* Home List */
+  #root > div > div > div > div:nth-of-type(2)  > div > div:nth-of-type(2) > div > div:nth-of-type(5),
+  #root > div > div > div > div:nth-of-type(2) > div > div:nth-of-type(2) > div > div:nth-of-type(5) > div:first-of-type,
+  
+  /* Draft list pages */
+  #root > div > div > div > div:nth-of-type(2) > div > div:nth-of-type(2) > div > div:first-of-type,
+  
+  /* Document list pages */
+  #root > div > div > div > div:nth-of-type(2) > div > div:nth-of-type(2) > div > div > div:nth-of-type(4),
+  #root > div > div > div > div:nth-of-type(2) > div > div:nth-of-type(2) > div > div > div:nth-of-type(4) > div:first-of-type,
+  
+  /* Backlinks footer */
+  #root > div > div > div > div:nth-of-type(2) > div > div:first-of-type > div:nth-of-type(2) > div:first-of-type > div:nth-of-type(2) > div:nth-of-type(5) > div > div:first-of-type,
+  
+  /* Documents list on a parent page */
+  html > body > div:nth-of-type(1) > div > div > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(2) > div > div > div:nth-of-type(5) > div > span > div:nth-of-type(1),
+  html > body > div:nth-of-type(1) > div > div > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(2) > div > div > div:nth-of-type(5) > div > div:nth-of-type(1),
+  
+  /* Documents list on a parent page */
+  html > body > div:nth-of-type(1) > div > div > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(1) > div > label > div,
+  
+  
+  /* Search page header - also require override  */
+  html > body > div:nth-of-type(1) > div > div > div > div:nth-of-type(2) > div > div:nth-of-type(1),
+  
+  
+  /* SHARED VIEW - Header*/
+  html > body > div:nth-of-type(1) > div > div:nth-of-type(1) > div > div:nth-of-type(3) > div > div > div:nth-of-type(1),
+  /* SHARED VIEW - Background */
+  html > body > div:nth-of-type(1) > div > div:nth-of-type(1) > div > div:nth-of-type(3) > div,
+  /* SHARED VIEW - Doclist */
+  html > body > div:nth-of-type(1) > div > div:nth-of-type(1) > div > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div > div > div:nth-of-type(3) > div > div,
+  
+  /* SHARED VIEW - Docslist header */
+  body > div:nth-child(1) > div > div:nth-child(1) > div > div:nth-child(3) > div > div > div:nth-child(2) > div > div > div:nth-child(3) > div > div,
+  
+  /* SHARED VIEW - Input Field */
+  #sidebar > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > label > div,
+  
+  
+  /* SHARED VIEW FOR COLLECTION - HEADER */
+  html > body > div:nth-of-type(1) > div > div:nth-of-type(1) > div > div:nth-of-type(3) > div > div:nth-of-type(1),
+  
+  /* SHARED VIEW FOR COLLECTION - h1 Header */
+  #root > div > div:nth-of-type(1) > div > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > span,
+  
+  /* SHARED VIEW FOR COLLECTION - TOC ...  */
+  #root > div > div:nth-of-type(1) > div > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div,
+  
+  /* ADMIN AREA - This little "rowgroup" makes it easier  */
+  div[role="rowgroup"]
+  
+  {
+      background: var(--bgcolor-main) !important;
+  }
+  
+  
+  /*
+  
+  IMPORTANT - but probably could also use --bgcolor-main instead of transparent 
+  */
+  #root > div > div > div > div:nth-of-type(2) > div {
+      background: transparent !important;
+  }
+  
+  
+  
+  /* 
+  ----------------------
+  
+  ██████  ███████ ██      ███████ ████████ ███████ 
+  ██   ██ ██      ██      ██         ██    ██      
+  ██   ██ █████   ██      █████      ██    █████   
+  ██   ██ ██      ██      ██         ██    ██      
+  ██████  ███████ ███████ ███████    ██    ███████ 
+                                                   
+                                                                                      
+  
+  ----------------------
+  */
+  
+  
+  
+  
+  
+  /* 
+  ----------------------
+  
+  ██   ██ ███████  █████  ██████  ███████ ██████  
+  ██   ██ ██      ██   ██ ██   ██ ██      ██   ██ 
+  ███████ █████   ███████ ██   ██ █████   ██████  
+  ██   ██ ██      ██   ██ ██   ██ ██      ██   ██ 
+  ██   ██ ███████ ██   ██ ██████  ███████ ██   ██ 
+                                                  
+                                                  
+  
+  ----------------------
+  */
+  
+  #root > div > div > div > div > div > div > div > label > div { 
+      border-radius: var(--search-input-radius); 
+  } /* GLOBAL - Search Radius */
+  
+  /*
+  
+  Header 
+  */
+  html .cECGKY.dMflsA {
+      background: var(--bgcolor-sidebar) !important;
+      box-shadow: var(--header-border);
+  }
+  
+  
+  
+  
+  
+  /* 
+  ----------------------
+  
+  ██     ██ ██ ██████  ████████ ██   ██ 
+  ██     ██ ██ ██   ██    ██    ██   ██ 
+  ██  █  ██ ██ ██   ██    ██    ███████ 
+  ██ ███ ██ ██ ██   ██    ██    ██   ██ 
+   ███ ███  ██ ██████     ██    ██   ██ 
+                                        
+                                        
+  
+  CONTENT WIDTH ALTERATION
+  ----------------------
+  */
+  @media (min-width: 46.0625em) {
+      /*
+      Outline feels like awkward width 
+      */
+      #root > div > div > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(2) {
+          xdisplay: grid;
+          grid-template-columns: 1fr minmax(0px, calc(58em + 88px)) 1fr;
+      }
+      
+  }
+  
+  
+  
+  
+  /* 
+  ----------------------
+  
+  
+  ██████   █████   ██████  ███████     ████████  ██████   ██████ 
+  ██   ██ ██   ██ ██       ██             ██    ██    ██ ██      
+  ██████  ███████ ██   ███ █████          ██    ██    ██ ██      
+  ██      ██   ██ ██    ██ ██             ██    ██    ██ ██      
+  ██      ██   ██  ██████  ███████        ██     ██████   ██████ 
+                                                                 
+                                                                 
+  
+  BODY > TABLE OF CONTENTS - TOC
+  ----------------------
+  */
+  
+  #root > div > div > div > div:nth-of-type(2) > div > div:first-of-type > div:nth-of-type(2) > div:nth-of-type(2) > div {
+      background-color: transparent !important; /* Used GREEN here for testing */	
+      margin-top: var(--toc-margin-top) !important;
+      xborder-left: 1px solid var(--border-color);
+  }
+  
+  /* Hide the CONTENTS header on TOC */
+  #root > div > div > div > div:nth-of-type(2) > div > div:first-of-type > div:nth-of-type(2) > div:nth-of-type(2) > div h3 {
+      display: none !important;
+  }
+  
+  /* NEW - Fulll line on left of TOC */
+  #root > div > div > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) ol {
+      xborder-left: .7px solid var(--border-color);
+      border-left: var(--toc-left-line) var(--border-color);
+      padding-left: var(--toc-left-padding);
+      margin-top: .5em; /* 1em is default  - pushes it up a bit*/
+  }
+  /* Compresses spacing on TOC a bit */
+  #root > div > div > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) ol li {
+      padding-top: 0px;
+      padding-bottom: 1px;
+      margin-bottom: 4px;	
+  }
+  #root > div > div > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) ol li a {
+      font-size: var(--toc-font-size) !important;
+      color: var(--toc-link-color);
+      font-size: 80% !important;
+  }
+  
+  /* 
+  ----------------------
+  
+  ███████  ██████ ██████   ██████  ██      ██      ██████   █████  ██████  
+  ██      ██      ██   ██ ██    ██ ██      ██      ██   ██ ██   ██ ██   ██ 
+  ███████ ██      ██████  ██    ██ ██      ██      ██████  ███████ ██████  
+       ██ ██      ██   ██ ██    ██ ██      ██      ██   ██ ██   ██ ██   ██ 
+  ███████  ██████ ██   ██  ██████  ███████ ███████ ██████  ██   ██ ██   ██ 
+                                                                           
+                                                                                                                                                          
+  ----------------------
+  
+  }
+  */
+  
+  
+  body {
+      scrollbar-color: #363636 transparent;
+  }
+  
+  
+  
+  /* 
+  ----------------------
+  
+  ██      ███████ ███████ ████████     ███████ ██ ██████  ███████ ██████   █████  ██████  
+  ██      ██      ██         ██        ██      ██ ██   ██ ██      ██   ██ ██   ██ ██   ██ 
+  ██      █████   █████      ██        ███████ ██ ██   ██ █████   ██████  ███████ ██████  
+  ██      ██      ██         ██             ██ ██ ██   ██ ██      ██   ██ ██   ██ ██   ██ 
+  ███████ ███████ ██         ██        ███████ ██ ██████  ███████ ██████  ██   ██ ██   ██ 
+                                                                                                                                                               
+  
+  ----------------------
+  
+  }
+  */
+      
+  body {
+      scrollbar-color: #363636 transparent;
+  }
+  /* I like th addition of these lines */
+  #sidebar > div:nth-of-type(3) {
+      scrollbar-color: #363636 transparent;
+      border-top: 1px solid var(--border-color) !important;
+      xborder-bottom: 1px solid var(--border-color) !important;
+  }
+  
+  
+  #root > div > div > span > div > div > div:nth-child(5) > div + div { display: var(--sidebar-invite); } 
+  
+  #root > div > div > span > div {
+      xborder-left: 1px solid red;
+  }
+  /* Background */
+  #sidebar {
+      background: var(--bgcolor-sidebar) !important;
+      /* xborder-right removed as it appears unused */
+      xborder-right: 1px solid red;
+      box-shadow: var(--sidebar-border);
+      
+  }
+  #sidebar a[aria-current="page"].active {
+      background: var(--active-page-sidebar) !important;
+  }
+  
+  
+  
+  #root > div > div > span > div button:hover {
+      xbackground: red !important;
+  }
+  
+  /* Highlight Active Links */
+  #root > div > div > span > div a[aria-current="page"].active
+  {
+      xcolor: rgb(230, 230, 230);
+      background: var(--active-page-sidebar) !important;
+  }
+  
+  
+  /* Highlight Color on Hover ... */
+  #root > div > div > span > div button:active, 
+  #root > div > div > span > div button:hover, 
+  #root > div > div > span > div button[aria-expanded="true"] {
+      background: var(--active-page-sidebar) !important;	
+  }
+  /* GLOBAL - Hide invite link */
+  #root > div > div > span > div > div > div:nth-child(5) > div {
+      xdisplay: none;
+  }
+  
+  
+  /* Clear background on annoying popup things */
+  #sidebar > div:nth-of-type(3) > div:nth-of-type(3) span,
+  #sidebar > div:nth-of-type(3) > div:first-of-type > div > div span
+  {
+      background: transparent !important;
+  }
+  
+  #sidebar div button:hover {
+      background: var(--sidebar-button-hover) !important;
+  }
+  
+  
+  /* New sidebar */
+  #sidebar a {
+      color: var(--sidebar-link-color) !important;
+  }
+  /* headers in sidebar */
+  #sidebar h3 > button {
+      xbackground-color: red !important;
+      color: var(--sidebar-link-color) !important;
+  }
+  
+  #sidebar > div:nth-of-type(3) > div:nth-of-type(3) > div > div > div:nth-of-type(3) > span {
+    xcolor: red !important;
+    color: var(--sidebar-link-color) !important;
+  }
+  
+  
+  
+  #sidebar > div:nth-of-type(3) > div:nth-of-type(5) > div:nth-of-type(2) {
+  
+      display: none !important;
+  }
+  
+  
+  
+  /* 
+  ----------------------
+  ███████ ██ ██████  ███████ ██████   █████  ██████      ██       ██████  ██    ██ ████████ ████████  ██████  ███    ██ 
+  ██      ██ ██   ██ ██      ██   ██ ██   ██ ██   ██      ██      ██   ██ ██    ██    ██       ██    ██    ██ ████   ██ 
+  ███████ ██ ██   ██ █████   ██████  ███████ ██████        ██     ██████  ██    ██    ██       ██    ██    ██ ██ ██  ██ 
+       ██ ██ ██   ██ ██      ██   ██ ██   ██ ██   ██      ██      ██   ██ ██    ██    ██       ██    ██    ██ ██  ██ ██ 
+  ███████ ██ ██████  ███████ ██████  ██   ██ ██   ██     ██       ██████   ██████     ██       ██     ██████  ██   ████ 
+                                                                                                                                                 
+  ----------------------
+  */
+  
+  
+  
+  button[aria-expanded="true"] {
+      background: var(--bgcolor-main) !important;
+  }
+  
+  
+  
+  /* 
+  ----------------------
+  FONT
+  ███████  ██████  ███    ██ ████████ 
+  ██      ██    ██ ████   ██    ██    
+  █████   ██    ██ ██ ██  ██    ██    
+  ██      ██    ██ ██  ██ ██    ██    
+  ██       ██████  ██   ████    ██    
+                                      
+                                      
+  ----------------------
+  */
+  #root .ProseMirror
+  { 
+      font-family: var(--font-global); 
+      xfont-family: 'Courier New', Courier, monospace !important; 
+  }
+  
+  
+  
+  
+  
+  /* 
+  ----------------------
+  
+  ██████   ██████  ██████  ██    ██ 
+  ██   ██ ██    ██ ██   ██  ██  ██  
+  ██████  ██    ██ ██   ██   ████   
+  ██   ██ ██    ██ ██   ██    ██    
+  ██████   ██████  ██████     ██    
+                                    
+                                    
+  
+  ----------------------
+  */
+  
+  
+  /* 
+  Main body 
+  */
+  html,
+  body,
+  #root > div > div > div > div:before {
+      background: var(--bgcolor-main) !important;
+  }
+  
+  html > body > div:nth-of-type(1) > div > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(5) > div > div:nth-of-type(1),
+  #root > div > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(5) > div > div:nth-of-type(1) > nav
+  { 
+      background: var(--bgcolor-main) !important;
+  }
+  
+  
+  #root .ProseMirror {
+      color: #c2c2c2 !important;
+  }
+  
+  
+  
+  
+  
+  
+  /* 
+  ----------------------
+  
+  ██████   ██████   ██████     ██      ██ ███████ ████████     ██   ██ ██  ██████  ██   ██ ███████ ██████  
+  ██   ██ ██    ██ ██          ██      ██ ██         ██        ██   ██ ██ ██       ██   ██ ██      ██   ██ 
+  ██   ██ ██    ██ ██          ██      ██ ███████    ██        ███████ ██ ██   ███ ███████ █████   ██████  
+  ██   ██ ██    ██ ██          ██      ██      ██    ██        ██   ██ ██ ██    ██ ██   ██ ██      ██   ██ 
+  ██████   ██████   ██████     ███████ ██ ███████    ██        ██   ██ ██  ██████  ██   ██ ███████ ██   ██ 
+                                                                                                           
+                                                                                                           
+  
+  ----------------------
+  */
+  
+  
+  
+  html > body > div:nth-of-type(1) > div > div > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(2) > div > div > div:nth-of-type(4)
+   {
+      min-height: calc(0px + 5vh);
+  }
+  
+  
+  
+  /*
+  
+  REMOVED POPUP SECTION 
+  
+  Popup menus
+  - preferences
+  - newdoc
+  - page settings
+  - code settings
+  
+  ███    ███  ██████  ██████   █████  ██      ███████ 
+  ████  ████ ██    ██ ██   ██ ██   ██ ██      ██      
+  ██ ████ ██ ██    ██ ██   ██ ███████ ██      ███████ 
+  ██  ██  ██ ██    ██ ██   ██ ██   ██ ██           ██ 
+  ██      ██  ██████  ██████  ██   ██ ███████ ███████ 
+                                                      
+                                                      
+  */
+  
+  
+  div[role="menu"] {
+      background: var(--bgcolor-main) !important;
+      xborder: 1px solid red !important;
+  }
+  
+  
+  div[role="menu"] > div {
+      background-color: var(--bgcolor-popups) !important;
+      filter: brightness(80%); 
+  }
+  xdiv[role="dialog"],
+  div[role="dialog"] > div,
+  div[role="dialog"] > div div
+  {
+      background-color: var(--bgcolor-popups) !important;
+  }		
+  
+  #root  div[role="dialog"] > div > div > div::before {
+      background-color: var(--bgcolor-popups) !important;
+      xfilter: brightness(80%); 
+  }
+  
+  /*
+  
+  FIXES WEIRD THING IN MODAL COLOR using BEFORE .. the top portion ... 
+  
+  */
+  html div:before {
+      background: var(--bgcolor-main) !important;
+  }
+  
+  
+  
+  /* 
+  ----------------------
+  BODY > HEADINGS
+  ██   ██ ███████  █████  ██████  ██ ███    ██  ██████      ██   ██  ██████  ██    ██ ███████ ██████  
+  ██   ██ ██      ██   ██ ██   ██ ██ ████   ██ ██           ██   ██ ██    ██ ██    ██ ██      ██   ██ 
+  ███████ █████   ███████ ██   ██ ██ ██ ██  ██ ██   ███     ███████ ██    ██ ██    ██ █████   ██████  
+  ██   ██ ██      ██   ██ ██   ██ ██ ██  ██ ██ ██    ██     ██   ██ ██    ██  ██  ██  ██      ██   ██ 
+  ██   ██ ███████ ██   ██ ██████  ██ ██   ████  ██████      ██   ██  ██████    ████   ███████ ██   ██ 
+                                                                                                      
+                                                                                                      
+              
+              
+  ----------------------
+  */
+  
+  
+  /*
+  
+  Hide the header hint helpers ... nice idea but just makes editor look busy
+  */
+  #root .ProseMirror[contenteditable="true"]:focus-within h1:not(.placeholder)::before, 
+  #root .ProseMirror-focused h1:not(.placeholder)::before, 
+  #root .ProseMirror[contenteditable="true"]:focus-within h2:not(.placeholder)::before, 
+  #root .ProseMirror-focused h2:not(.placeholder)::before, 
+  #root .ProseMirror[contenteditable="true"]:focus-within h3:not(.placeholder)::before, 
+  #root .ProseMirror-focused h3:not(.placeholder)::before, 
+  #root .ProseMirror[contenteditable="true"]:focus-within h4:not(.placeholder)::before, 
+  #root .ProseMirror-focused h4:not(.placeholder)::before, 
+  #root .ProseMirror[contenteditable="true"]:focus-within h5:not(.placeholder)::before, 
+  #root .ProseMirror-focused h5:not(.placeholder)::before, 
+  #root .ProseMirror[contenteditable="true"]:focus-within h6:not(.placeholder)::before, 
+  #root .ProseMirror-focused h6:not(.placeholder)::before {
+      opacity: 0;
+  }
+  
+  
+  /* 
+  ----------------------
+  BODY > HEADINGS
+  ██   ██  ██ 
+  ██   ██ ███ 
+  ███████  ██ 
+  ██   ██  ██ 
+  ██   ██  ██ 
+              
+              
+  ----------------------
+  */
+  
+  /* Targets main page h1 */
+  #root > div > div > div > div > div > div > div > div div span[contenteditable="true"] {
+      background: var(--bgcolor-main) !important;	
+      font-size: .95em;
+  }
+  
+  #root > div > div > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(2) [tabindex="-1"] {
+      xbackground: green !important;
+      xz-index: 1000 !important;
+      border-bottom: .5px solid var(--border-color) !important;
+      margin-top: 4vh !important; /* Slightly change default heigt from top */
+  }
+  
+  
+  #root > div > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > span {
+      font-size: var(--content-h1-size) !important;
+  } 
+  #root > div > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) {
+      margin-top: var(--content-h1-margin-top) !important;
+      margin-bottom: var(--content-h1-margin-bottom) !important;
+  } 
+  
+  
+  
+  
+  /*
+  
+  INFO BAR BENEATH MAIN BODY h1 
+  - but it's actually not an h1
+  - Hides it by default but can show it on hover
+  
+  ██   ██  ██     ██       ██ ███    ██ ███████  ██████  ██████   █████  ██████  
+  ██   ██ ███      ██      ██ ████   ██ ██      ██    ██ ██   ██ ██   ██ ██   ██ 
+  ███████  ██       ██     ██ ██ ██  ██ █████   ██    ██ ██████  ███████ ██████  
+  ██   ██  ██      ██      ██ ██  ██ ██ ██      ██    ██ ██   ██ ██   ██ ██   ██ 
+  ██   ██  ██     ██       ██ ██   ████ ██       ██████  ██████  ██   ██ ██   ██ 
+                                                                                 
+                                                                                 
+  
+  */
+  #root > div > div > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(2) > div > div > div:nth-of-type(2) {
+      xdisplay: none !important;
+      xborder: 1px solid red;
+      margin-bottom: 0px !important;
+      opacity: 0;
+  }
+  #root > div > div > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(2) > div > div > div:nth-of-type(2):hover {
+      opacity: 1;
+  }
+  
+  
+  
+  
+  
+  /*
+  ██   ██ ██████  
+  ██   ██      ██ 
+  ███████  █████  
+  ██   ██ ██      
+  ██   ██ ███████ 
+                  
+                  
+  - This works but can't get main title to works
+  - Also odd that main title is NOT h1
+  */
+  
+  #root .ProseMirror h2 {
+      margin-top: 30px !important;
+      font-size: 28px !important;
+      xborder-bottom: .2px solid rgb(194, 194, 194) !important;
+      font-weight: 700;
+  }
+  
+  /*
+  ██   ██ ██████  
+  ██   ██      ██ 
+  ███████  █████  
+  ██   ██      ██ 
+  ██   ██ ██████  
+                  
+                  
+  */
+  
+  #root .ProseMirror h3 {
+      margin-top: 35px !important;
+      font-weight: 700;
+  }
+  #root .ProseMirror h4,
+  #root .ProseMirror h5 {
+      margin-top: 30px !important;
+      font-weight: 600;
+  }
+  
+  
+  /* 
+  ----------------------
+  BODY > LINKS
+  ██████   ██████  ██████  ██    ██     ██       ██      ██ ███    ██ ██   ██ ███████ 
+  ██   ██ ██    ██ ██   ██  ██  ██       ██      ██      ██ ████   ██ ██  ██  ██      
+  ██████  ██    ██ ██   ██   ████         ██     ██      ██ ██ ██  ██ █████   ███████ 
+  ██   ██ ██    ██ ██   ██    ██         ██      ██      ██ ██  ██ ██ ██  ██       ██ 
+  ██████   ██████  ██████     ██        ██       ███████ ██ ██   ████ ██   ██ ███████ 
+                                                                                      
+                                                                                      
+  ----------------------
+  */
+  .ProseMirror p a {
+      color: var(--content-link-color) !important;
+      xtext-underline-offset: auto !important; /* Removes weird Outline offset */
+      
+  }	
+  .ProseMirror p a, 
+  .ProseMirror p a:hover {
+      text-decoration-color: var(--content-link-color);
+      text-decoration-thickness: 2px;
+      font-weight: 500 !important; /* 500 is default */
+      color: var(--content-link-color) !important;
+  }
+  
+  /* Internal vs EXTENRAL pages */
+  #root .ProseMirror p a {
+      xbackground: #edf2f7 !important;
+      xbackground-color: red !important;
+  }
+  /* External links variation */
+  #root .ProseMirror p a[href^="http"] { position: relative; }
+  #root .ProseMirror p a[href^="http"]::after {
+      content: '↗'; /* Use an external link icon of your choice */
+      margin-left: 0.3em; /* Add spacing between the link text and the icon */
+      font-size: 0.9em; /* Adjust size to your preference */
+      vertical-align: middle; /* Align the icon properly with the text */
+      display: inline-block;
+      transform: translateY(1px); /* Optional: fine-tune alignment */
+  }
+  
+  
+  
+  
+  /* 
+  ----------------------
+  BODY > LI BULLETS
+  ██████   ██████  ██████  ██    ██     ██       ██      ██ 
+  ██   ██ ██    ██ ██   ██  ██  ██       ██      ██      ██ 
+  ██████  ██    ██ ██   ██   ████         ██     ██      ██ 
+  ██   ██ ██    ██ ██   ██    ██         ██      ██      ██ 
+  ██████   ██████  ██████     ██        ██       ███████ ██ 
+                                                            
+                                                            
+  ----------------------
+  */
+  .ProseMirror li::marker {
+    color: orange;
+    xfont-size: 1em; /* Changing size of li bullets */
+  }
+  
+  
+  
+  
+  /*
+  
+  ████████  █████  ██████  ██      ███████     ███████ ██ ██   ██ 
+     ██    ██   ██ ██   ██ ██      ██          ██      ██  ██ ██  
+     ██    ███████ ██████  ██      █████       █████   ██   ███   
+     ██    ██   ██ ██   ██ ██      ██          ██      ██  ██ ██  
+     ██    ██   ██ ██████  ███████ ███████     ██      ██ ██   ██ 
+                                                                  
+                                                                  
+  
+  - Top margin for tables in Outline is -1em and seems should be more
+  - Also could use more bottom padding for all
+  */
+  #root .ProseMirror .table-scrollable {
+      margin-top: -2em;
+      margin-bottom: 8px !important;
+  }
+  
+  
+  .ProseMirror table th {
+      background: var(--bgcolor-sidebar) !important;
+  }
+  
+  /** BODY - Table */
+  #root > div > div > div > div > div th,
+  #root > div > div > div > div > div td {
+      background: transparent !important;
+      border-bottom: 1px solid  !important
+  }
+  
+  #root > div > div > div > div > div th {
+      border: var(--table-th-border) !important;
+  }
+  
+  #root > div > div > div > div > div td {
+      border:  var(--table-td-border) !important;
+  }
+  
+  #root > div > div > div > div > div th {
+      color: var(--table-th-color) !important;
+      font-weight: 800 !important;
+  }
+  
+  
+  
+  
+  
+  /* 
+  ----------------------
+  BODY > CODE BLOCKS
+  
+   ██████  ██████  ██████  ███████     ██████  ██       ██████   ██████ ██   ██ ███████ 
+  ██      ██    ██ ██   ██ ██          ██   ██ ██      ██    ██ ██      ██  ██  ██      
+  ██      ██    ██ ██   ██ █████       ██████  ██      ██    ██ ██      █████   ███████ 
+  ██      ██    ██ ██   ██ ██          ██   ██ ██      ██    ██ ██      ██  ██       ██ 
+   ██████  ██████  ██████  ███████     ██████  ███████  ██████   ██████ ██   ██ ███████ 
+                                                                                        
+                                                                                        
+  
+  ----------------------
+  */
+  #root .ProseMirror pre {
+      background: var(--codeblock-bg);
+      font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  }
+  #root .code-block.with-line-numbers::after {
+      background: var(--codeblock-bg-gutter);
+  }
+  
+  
+  
+  
+  
+  /* End of Outline-8-61.css */
+  
+   
